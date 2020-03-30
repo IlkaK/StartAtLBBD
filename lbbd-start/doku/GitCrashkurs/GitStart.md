@@ -9,3 +9,20 @@ Das ist das Git bzw. die Gitbash, die auch bei unserem Arbeitgeber verwendet wir
 
 git clone https://github.com/IlkaK/StartAtLBBD.git
 
+Wahrscheinlich musst Du hier noch mal Deinen Github Benutzernamen und Passwort eingeben.
+
+5. Dann in das Verzeichnis StartAtLBBD wechseln mit:
+
+cd StartAtLBBD/
+
+6. Dann solltest Du bereits eine Veränderung in der Gitbash sehen, da Du Dich jetzt automatisch im Masterbranch befindest. Wenn Du jetzt den Befehl 
+
+git status
+
+ausführst, siehst Du Folgendes:
+
+On branch master
+
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
