@@ -10,7 +10,7 @@ Damit das Projekt importiert werden kann, muss es zunächst geclont werden. Fall
 
 ![Directory](chooseDirectory.png)
 
-3. Markiere den Ordner StartAtLBBD`, der beim Klonen erstellt wurde. 
+3. Markiere den Ordner `StartAtLBBD`, der beim Klonen erstellt wurde. 
 
 ![StartAtLBBD](startAtLbbd.png)
 
