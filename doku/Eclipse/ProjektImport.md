@@ -6,9 +6,13 @@ Damit das Projekt importiert werden kann, muss es zunächst geclont werden. Fall
 
 1. Öffnen von Eclipse, File, Open Projects from File System
 
-2. Wähle Directory aus: ![Directory](chooseDirectory.png)
+2. Wähle Directory aus: 
 
-3. Markiere den Ordner StartAtLBBD, der beim Klonen erstellt wurde. ![StartAtLBBD](startAtLbbd.png)
+![Directory](chooseDirectory.png)
+
+3. Markiere den Ordner StartAtLBBD`, der beim Klonen erstellt wurde. 
+
+![StartAtLBBD](startAtLbbd.png)
 
 4. Wenn das geklappt hat, ist das Projekt importiert. 
 
