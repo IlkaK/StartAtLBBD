@@ -70,3 +70,4 @@ Für ein Projekt habe ich mal eine kleine Git-Präsentation gemacht, da in dem P
 
 [Link zur Git-Präsentation](./git.pdf)
  
+Die Infos dazu habe ich aus dem Buch (damals im Kindle-Format, auf Amazon habe ich jetzt nur die gebundene Version gefunden.) [Versionskontrolle mit Git](https://www.amazon.de/Versionskontrolle-mit-Git-Jon-Loeliger/dp/389721945X)
