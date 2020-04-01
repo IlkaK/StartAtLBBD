@@ -1,7 +1,10 @@
 # StartAtLBBD
 
-In diesem Repository können wir unseren Code und die Aufgaben austauschen. So üben wir gleichzeitig den Umgang mit Git, Java und später noch Maven.
+In diesem Repository können wir unseren Code und die Aufgaben austauschen. 
 
-Hier geht es zum [Git-Kapitel](./doku/GitCrashkurs/GitStart.md)
+1. [Infos zu Git](./doku/GitCrashkurs/GitStart.md)
 
-Hier geht es zu den bereits bekannten Fragen, die hauptsächlich [das erste Kapitel](./doku/JavaBuch/01_Kapitel/Fragen.md) des Java-Grundkurs-Buches betreffen.
+2. [Importieren des Projekts in Eclipse](./doku/Eclipse/ProjektImport.md)
+
+3. [Buch Java Grundkurs](./doku/JavaBuch/01_Kapitel/Fragen.md)
+
