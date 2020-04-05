@@ -20,51 +20,8 @@ Wahrscheinlich musst Du hier noch mal Deinen Github Benutzernamen und Passwort e
 
 6. Dann solltest Du bereits eine Veränderung in der Gitbash sehen, da Du Dich jetzt automatisch im Masterbranch befindest. 
 
-# Nützliche Git Befehle #
 
-## Git Status ## 
-
-Mit `git status` siehst Du Folgendes:
-
-```
-On branch master
-
- Your branch is up to date with 'origin/master'.
-
- nothing to commit, working tree clean
- ```
-Git status hilft mir immer, wenn ich nicht weiss, auf welchem Branch ich gerade bin und welche Dateien ich alle angepasst habe. Hier bist Du auf dem Branch `master`. Der Teil `Your branch is up to date with origin/master` bezieht sich auf die Beziehung zwischen der Veränderung vom Remote-Branch, welcher origin/master heisst und dem aktuellen Branch (master - ohne origin), auf dem Du gerade arbeitest.
-
-Wenn eine Datei verändert wurde, sieht es so aus:
-
-```
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   doku/GitCrashkurs/GitStart.md
-
-no changes added to commit (use "git add" and/or "git commit -a")
- ```
-
-Die Datei `GitStart.md` hat sich verändert, aber die Veränderung wird von Git noch ignoriert, da sie nicht markiert ist, dass sie beim nächsten Commit im Git gespeichert wird (not staged for commit).
-
-## Git branch -a ##
- 
-Mit `git branch -a` siehst Du alle Branches, die es bei Dir im Git gibt.
-
-```
-* master
-  remotes/origin/master
-```
-
-Der Eintrag mit * bezieht sich auf den Branch, auf dem Du gerade arbeitest. Der Branch `origin/master` ist ein Remote-Branch. 
-
-
- # Git Präsentation #
+# Git Präsentation #
  
 Für ein Projekt habe ich mal eine kleine Git-Präsentation gemacht, da in dem Projekt Teilnehmer waren, die zwar mit Git arbeiten sollten, aber bisher nichts mit Versionskontrollsystemen gemacht hatten.
 

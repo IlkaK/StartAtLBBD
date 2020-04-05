@@ -1,10 +1,20 @@
 # StartAtLBBD
 
-In diesem Repository können wir unseren Code und die Aufgaben austauschen. 
+In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
-1. [Infos zu Git](./doku/GitCrashkurs/GitStart.md)
+## 1. Git ## 
 
-2. [Importieren des Projekts in Eclipse](./doku/Eclipse/ProjektImport.md)
+[Git Start](./doku/GitCrashkurs/GitStart.md) 
 
-3. [Buch Java Grundkurs](./doku/JavaBuch/01_Kapitel/Fragen.md)
+[Nützliche Git-Befehle](./doku/GitCrashkurs/GitBefehle.md) 
+
+[Kleine Git-Übung](./doku/GitCrashkurs/GitUebung.md)
+
+## 2. Eclipse ##
+
+[Importieren des Projekts in Eclipse](./doku/Eclipse/ProjektImport.md)
+
+## 3. Java ## 
+
+[Buch Java Grundkurs](./doku/JavaBuch/01_Kapitel/Fragen.md)
 
