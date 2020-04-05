@@ -8,7 +8,7 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 [Nützliche Git-Befehle](./doku/GitCrashkurs/GitBefehle.md) 
 
-[Kleine Git-Übung](./doku/GitCrashkurs/GitUebung.md)
+[1. Git-Übung zum Kennenlernen der Branches ](./doku/GitCrashkurs/GitBranchesUebung.md)
 
 ## 2. Eclipse ##
 
