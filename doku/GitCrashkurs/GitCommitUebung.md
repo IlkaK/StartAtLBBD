@@ -41,9 +41,11 @@ Um die Log-Ansicht zu beenden, benötigt es ein `q`.
 
 8. Jetzt wird die Änderung commitet: `git commit -m "Korrektur des Titels des Kapitellinks"`
 
-9. Und zum Schluss wird die Änderung auf Github gepusht: `git push`
+9. Was siehst Du jetzt, wenn Du den Befehl `git log` ausführst? Um die Log-Ansicht zu beenden, benötigt es ein q. Taucht der neue Commit im Log auf?
 
-10. Was steht jetzt bei `git status`?
+10. Und zum Schluss wird die Änderung auf Github gepusht: `git push`
 
-11. Findest Du die Änderung auf Github wieder?
+11. Was steht jetzt bei `git status`?
+
+12. Findest Du die Änderung auf Github wieder?
 
