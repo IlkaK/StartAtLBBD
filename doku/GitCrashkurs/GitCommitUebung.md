@@ -16,10 +16,34 @@ Git speichert bei einem Commit intern nicht die Datei an sich, sondern nur die �
 
 Bevor eine Dateiänderung in einem Commit landen kann, muss sie als erstes in den Index gestellt werden.
 Also nach der Speicherung auf dem lokalen Dateisystem, muss die Dateiänderung dem Index hinzugefügt werden 
-Der Befehl dazu ist `git add veraenderteDate`. Um alle bis jetzt veränderten Dateien in den Index zu stellen, kann man mit `*` arbeiten, `git add *`. 
+Der Befehl dazu ist `git add veraenderteDatei`. Um alle bis jetzt veränderten Dateien in den Index zu stellen, kann man mit `*` arbeiten, `git add *`. 
 
-Wird danach ein Commit abgesetzt, dann werden alle im Index gesammelten Dateiänderungen, in dem Commit übernommen. Bei jedem Commit, muss ein Erklärtext mitgegeben werden. Hat man also viele verschiedene Änderungen gemacht, lohnt es sich, erst einen Teil in den Index zu stellen, den Commit mit einer entsprechenden Erklärung zu versehen und dann erst die nächsten Dateiänderungen in den Index zu stellen und diese wieder zu commiten usw. So entsteht eine nachvollziehbare Commit-Historie.
+Wird danach ein Commit abgesetzt, dann werden alle im Index gesammelten Dateiänderungen in dem Commit übernommen. Bei jedem Commit, muss ein Erklärtext mitgegeben werden. Hat man also viele verschiedene Änderungen gemacht, lohnt es sich, erst einen Teil in den Index zu stellen, den Commit mit einer entsprechenden Erklärung zu versehen und dann erst die nächsten Dateiänderungen in den Index zu stellen und diese wieder zu commiten usw. So entsteht eine nachvollziehbare Commit-Historie.
 
 ## Start Übung ##
 
 Um die Übung zu machen, würde ich empfehlen auf den eigenen Branch aus der Übung zuvor zu wechseln. [Git Branches](./GitBranchesUebung.md)
+
+1. Um auf den eigenen Branch zu wechseln: `git checkout NadinesLoesungen`
+
+2. Was siehst Du, wenn Du den Befehl `git log` ausführst? 
+Um die Log-Ansicht zu beenden, benötigt es ein `q`. 
+
+3. Vergleiche mit der Ansicht, der Commits im [Github](https://github.com/IlkaK/StartAtLBBD/commits/master). Gibt es Unterschiede, findest Du die Commits aus der Git-Bash hier wieder? 
+
+4. Öffne die Datei README.md in einem Editor oder in Eclipse. Ändere den Titel des untersten Links von "Buch Java Grundkurs" zu "Fragen zum ersten Kapitel" und speicher die Datei.
+
+5. Führe den Befehl `git status` aus. Was siehst Du in der Git-Bash?
+
+6. Füge die Dateiänderung dem Index hinzu: `git add README.md` 
+
+7. Was sieht man jetzt bei `git status`?
+
+8. Jetzt wird die Änderung commitet: `git commit -m "Korrektur des Titels des Kapitellinks"`
+
+9. Und zum Schluss wird die Änderung auf Github gepusht: `git push`
+
+10. Was steht jetzt bei `git status`?
+
+11. Findest Du die Änderung auf Github wieder?
+
