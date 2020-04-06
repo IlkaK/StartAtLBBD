@@ -18,5 +18,5 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 ## 3. Java ## 
 
-[Buch Java Grundkurs](./doku/JavaBuch/01_Kapitel/Fragen.md)
+[Fragen zum ersten Kapitel](./doku/JavaBuch/01_Kapitel/Fragen.md)
 
