@@ -12,6 +12,8 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 [2. Git-Übung über Indexe, Commits und Pushes](./doku/GitCrashkurs/GitCommitUebung.md)
 
+[3. Git-Übung zum Rebase, Merge und CherryPicking](./doku/GitCrashkurs/GitRebaseUebung.md)
+
 ## 2. Eclipse ##
 
 [Importieren des Projekts in Eclipse](./doku/Eclipse/ProjektImport.md)
