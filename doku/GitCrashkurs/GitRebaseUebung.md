@@ -41,8 +41,7 @@ Ein häufiges Vorgehen ist, dass man auf einem Feature-Branch entwickelt hat und
 
 Author: unknown <nadineeisenring@bluewin.ch>
 Date:   Tue Apr 7 12:55:51 2020 +0200
-
-    Aenderung zum testen
+Aenderung zum testen
 
 ## Exkurs ##
 
