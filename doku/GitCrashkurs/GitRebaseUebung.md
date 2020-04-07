@@ -11,6 +11,9 @@ Wichtig beim Rebase ist, von welchem Branch zu welchem Branch rebased wird. Also
 1. Wechsel auf den Master Branch: `git checkout master`
 
 2. Wann wurde das letzte Commit gemacht: `git log`
+`Author: Ilka Kokemor <ikokemor@gmail.com>
+Date:   Tue Apr 7 12:09:33 2020 +0200
+Aenderung am Git-Testfile`
 
 `Author: Ilka Kokemor <ikokemor@gmail.com>
 Date:   Tue Apr 7 12:09:33 2020 +0200
@@ -19,12 +22,17 @@ Aenderung am Git-Testfile`
 3. Wechsel auf den Branch NadinesLoesungen: `git checkout NadinesLoesungen`
 
 4. Wann wurde das letzte Commit hier gemacht: `git log`
+`Author: Ilka Kokemor <ikokemor@gmail.com>
+Date:   Mon Mar 30 22:41:26 2020 +0200
+    Mehr Infos zu Git`
 
 `Author: Ilka Kokemor <ikokemor@gmail.com>
 Date:   Mon Mar 30 22:41:26 2020 +0200
     Mehr Infos zu Git`
 
 5. Welche Meldung ergibt `git status`? 
+`Your branch is up to date with 'origin/NadinesLoesungen'.
+nothing to commit, working tree clean`
 
 `Your branch is up to date with 'origin/NadinesLoesungen'.
 nothing to commit, working tree clean`
@@ -32,7 +40,10 @@ nothing to commit, working tree clean`
 6. Führe den Befehl `git rebase master` aus.
 
 7. Welches ist jetzt das letzte Commit: `git log`
+<<<<<<< HEAD
 
+=======
+>>>>>>> Update GitRebaseUebung.md
 `Author: Ilka Kokemor <ikokemor@gmail.com>
 Date:   Tue Apr 7 12:09:33 2020 +0200
 Aenderung am Git-Testfile`
