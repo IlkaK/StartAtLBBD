@@ -16,14 +16,6 @@ Wichtig beim Rebase ist, von welchem Branch zu welchem Branch rebased wird. Also
 Date:   Tue Apr 7 12:09:33 2020 +0200
 Aenderung am Git-Testfile`
 
-`Author: Ilka Kokemor <ikokemor@gmail.com>
-Date:   Tue Apr 7 12:09:33 2020 +0200
-Aenderung am Git-Testfile`
-
-`Author: Ilka Kokemor <ikokemor@gmail.com>
-Date:   Tue Apr 7 12:09:33 2020 +0200
-Aenderung am Git-Testfile`
-
 3. Wechsel auf den Branch NadinesLoesungen: `git checkout NadinesLoesungen`
 
 4. Wann wurde das letzte Commit hier gemacht: `git log`
@@ -32,21 +24,7 @@ Aenderung am Git-Testfile`
 Date:   Mon Mar 30 22:41:26 2020 +0200
     Mehr Infos zu Git`
 
-`Author: Ilka Kokemor <ikokemor@gmail.com>
-Date:   Mon Mar 30 22:41:26 2020 +0200
-    Mehr Infos zu Git`
-
-`Author: Ilka Kokemor <ikokemor@gmail.com>
-Date:   Mon Mar 30 22:41:26 2020 +0200
-    Mehr Infos zu Git`
-
 5. Welche Meldung ergibt `git status`? 
-
-`Your branch is up to date with 'origin/NadinesLoesungen'.
-nothing to commit, working tree clean`
-
-`Your branch is up to date with 'origin/NadinesLoesungen'.
-nothing to commit, working tree clean`
 
 `Your branch is up to date with 'origin/NadinesLoesungen'.
 nothing to commit, working tree clean`
@@ -77,13 +55,8 @@ Ein häufiges Vorgehen ist, dass man auf einem Feature-Branch entwickelt hat und
 
 `Author: unknown <nadineeisenring@bluewin.ch>
 Date:   Tue Apr 7 12:55:51 2020 +0200
-<<<<<<< HEAD
-=======
-Aenderung zum testen`
->>>>>>> fd419ec... Update GitRebaseUebung.md
 
 ## Exkurs ##
->>>>>>> c512df6... Update GitRebaseUebung.md
 
 Merging versus Rebasing. Aus der bisherigen Beschreibung sieht beides sehr ähnlich aus. 
 Unter dem folgenden Link wird auf die Unterschiede von Merging und Rebasing eingegangen. 
