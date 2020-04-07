@@ -1,4 +1,4 @@
-package main.java.ch.start.uebungen;
+package ch.start.uebungen;
 
 public enum GgTMethod {
 	
