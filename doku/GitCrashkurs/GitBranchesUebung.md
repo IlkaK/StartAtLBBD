@@ -11,19 +11,39 @@ Ich sende Dir die Fragen noch via Mail, dann kannst Du die Antworten bzw. die Gi
 
 1. Was siehst Du zurzeit, wenn Du `git branch -a` ausführst?
 
+`* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+Zeigt alle momentanen Branchen an. * zeigt welche gerade gewählt ist.
+remote-Branchen sind nicht lokal.`
+
 2. Erstelle einen eigenen Branch mit dem Befehl: `git branch "NadinesLoesungen"`
 
 3. Was siehst Du jetzt, wenn Du `git branch -a` ausführst?
+
+`  NadinesLoesungen  -> neue Branch die ich lokal erstellt habe
+* master remotes/origin/HEAD -> origin/master remotes/origin/master`
 
 4. Wechsle in den neuen Branch `git checkout NadinesLoesungen`
 
 5. Was siehst Du jetzt, wenn Du `git branch -a` ausführst?
 
+`* NadinesLoesungen -> hat nun das Sternchen, da es die ausgewählte Branch ist.
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master`
+
 6. Speicher den neuen Branch im Github mit dem Befehl `git push -u origin HEAD`
 
 7. Welche Ausgabe bekommst Du dabei in der Git-Bash?
 
+`Ich musste mich anmelden. 
+To https://github.com/IlkaK/StartAtLBBD.git
+* [new branch]      HEAD -> NadinesLoesungen Branch 'NadinesLoesungen' set up to track remote branch 'NadinesLoesungen' from 'origin'.`
+
 8. Was siehst Du jetzt, wenn Du `git branch -a` ausführst?
+
+`Die Branch gibt es nun lokal und remote.`
 
 9. Schau unter https://github.com/IlkaK/StartAtLBBD unter dem Punkt "branches" (neben "commits").
 Findest Du dort Deinen neuen Branch?
