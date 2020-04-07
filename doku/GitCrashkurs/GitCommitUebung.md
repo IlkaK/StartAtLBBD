@@ -29,23 +29,45 @@ Um die Übung zu machen, würde ich empfehlen auf den eigenen Branch aus der Üb
 2. Was siehst Du, wenn Du den Befehl `git log` ausführst? 
 Um die Log-Ansicht zu beenden, benötigt es ein `q`. 
 
+`Eine Aufführung der getätigten Änderungen. Von Wem und Wann mit einem Kommentar.`
+
 3. Vergleiche mit der Ansicht, der Commits im [Github](https://github.com/IlkaK/StartAtLBBD/commits/master). Gibt es Unterschiede, findest Du die Commits aus der Git-Bash hier wieder? 
+
+`Ich nehme an alles Änderungen die neu im log sind werden angezeigt.`
 
 4. Öffne die Datei README.md in einem Editor oder in Eclipse. Ändere den Titel des untersten Links von "Buch Java Grundkurs" zu "Fragen zum ersten Kapitel" und speicher die Datei.
 
 5. Führe den Befehl `git status` aus. Was siehst Du in der Git-Bash?
 
+`Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+no changes added to commit (use "git add" and/or "git commit -a")
+Es zeigt an, dass das File Readme.md lokal geändert wurde. Als nächster Schritt kann man das File dem Index hinzufügen.`
+
 6. Füge die Dateiänderung dem Index hinzu: `git add README.md` 
 
 7. Was sieht man jetzt bei `git status`?
+
+`Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+File ist nun bereit um zu commiten.`
 
 8. Jetzt wird die Änderung commitet: `git commit -m "Korrektur des Titels des Kapitellinks"`
 
 9. Was siehst Du jetzt, wenn Du den Befehl `git log` ausführst? Um die Log-Ansicht zu beenden, benötigt es ein q. Taucht der neue Commit im Log auf?
 
+`Ja`
+
 10. Und zum Schluss wird die Änderung auf Github gepusht: `git push`
 
 11. Was steht jetzt bei `git status`?
 
+`nothing to commit, working tree clean`
+
 12. Findest Du die Änderung auf Github wieder?
+
+`Ja`
 
