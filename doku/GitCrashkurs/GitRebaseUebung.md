@@ -93,8 +93,6 @@ Date:   Tue Apr 7 12:55:51 2020 +0200
 Aenderung zum testen`
 >>>>>>> 466fb09... Update GitRebaseUebung.md
 
-## Exkurs ##
-
 Merging versus Rebasing. Aus der bisherigen Beschreibung sieht beides sehr ähnlich aus. 
 Unter dem folgenden Link wird auf die Unterschiede von Merging und Rebasing eingegangen. 
 [Merge vs. Rebase](https://www.atlassian.com/de/git/tutorials/merging-vs-rebasing)
