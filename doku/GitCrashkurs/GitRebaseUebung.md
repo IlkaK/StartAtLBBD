@@ -85,6 +85,12 @@ Ein häufiges Vorgehen ist, dass man auf einem Feature-Branch entwickelt hat und
 5. Führe den Befehl zum Merge aus: `git merge NadinesLoesungen`
 
 6. Was siehst Du jetzt mit `git log`?
+<<<<<<< HEAD
+=======
+
+Author: unknown <nadineeisenring@bluewin.ch>
+Date:   Tue Apr 7 12:55:51 2020 +0200
+>>>>>>> 2238623... Update GitRebaseUebung.md
 
 `Author: unknown <nadineeisenring@bluewin.ch>
 Date:   Tue Apr 7 12:55:51 2020 +0200
