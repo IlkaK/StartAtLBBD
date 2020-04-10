@@ -20,4 +20,14 @@ nothing to commit, working tree clean
 
 1. Verändere die Datei GitTest.md und speicher sie.
 
-2. Jetzt ist sie noch nicht im Index und ein reset ist einfach. Dabei wird die gespeicherte Änderung wieder rückgängig gemacht.
+2. Was ergibt `git status` jetzt?
+
+3. Jetzt machen wir die Änderung rückgängig: `git reset --hard`
+
+4. Was siehst Du jetzt in `git status`?
+
+5. Verändere die Datei GitTest.md noch einmal speicher sie und füge sie dem Index hinzu.
+
+6. Mache die Änderung wieder rückgängig mit dem gleichen Befehl: `git reset --hard` 
+
+7. Was steht jetzt bei `git status`?
