@@ -10,6 +10,11 @@ Für die Übung können wir wieder Veränderungen an GitTest.md machen. Überpr�
 
 Die Ausgabe von `git status` sollte folgendermassen aussehen:
 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
 
 ## Start Übung ## 
 
