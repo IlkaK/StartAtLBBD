@@ -33,3 +33,9 @@ nothing to commit, working tree clean
 7. Was steht jetzt bei `git status`?
 
 Das ist ein mächtiger Befehl. Er macht ein Reset auf alle Änderungen, die noch nicht im Index sind und alle, die bereits im Index sind. Es gibt auch noch veschiedene kleinere Varianten davon (z.B. `git reset --soft`), die helfen mir bei Problemen aber selten weiter. Hier gibt es eine kleine Übersicht [Git Reset Optionen](https://git-scm.com/docs/git-reset)
+
+Aber es geht noch mehr.
+
+8. Mache noch mal eine Änderung am GitTest.md, füge sie dem Index hinzu und commite sie. 
+
+
