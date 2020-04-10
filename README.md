@@ -16,6 +16,8 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 [4. Git-Übung zum CherryPicking](./doku/GitCrashkurs/GitCherryPickingUebung.md)
 
+[5. Git-Übung zum Reset](./doku/GitCrashkurs/GitResetUebung.md)
+
 ## 2. Eclipse ##
 
 [Importieren des Projekts in Eclipse](./doku/Eclipse/ProjektImport.md)
