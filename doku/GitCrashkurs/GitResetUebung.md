@@ -4,7 +4,12 @@ Das Git Reset ist immer mal wichtig, wenn man sich irgendwo im Git verliert und 
 
 Manchmal ist es einfacher, die eigenen Dateiänderungen zwischenzuspeichern und alles zu resetten zu dem Stand, der auf dem Server gespeichert ist. 
 
-Für die Übung können wir wieder GitTest.md verwenden. 
+Für die Übung können wir wieder Veränderungen an GitTest.md machen. Überprüfe vor der Übung mit `git status`, dass Dein Working Tree clean ist, also das es keine Änderungen gibt, die noch nicht gepusht wurden. Die würden sonst automatisch zurückgesetzt sind.
+
+## Vorraussetzung ##
+
+Die Ausgabe von `git status` sollte folgendermassen aussehen:
+
 
 ## Start Übung ## 
 
