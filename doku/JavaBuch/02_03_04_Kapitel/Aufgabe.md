@@ -30,7 +30,7 @@ Ich hoffe, das klappt soweit.
 
 ## Übungsbeschreibung ##
 
-Für die Übung gibt es zwei Java-Files: GgT.java und GgTMethod.java. Du kannst natürlich gerne weitere anlegen. In der GgT-Klasse ist die Main-Methode, die ausgeführt wird. Es geht darum, den grössten gemeinsamen Teiler von zwei Zahlen auszurechnen. [Wikidia-Link zum GgT](https://de.wikipedia.org/wiki/Gr%C3%B6%C3%9Fter_gemeinsamer_Teiler) 
+Für die Übung gibt es zwei Java-Files: GgT.java und GgTMethod.java. Du kannst natürlich gerne weitere anlegen. In der GgT-Klasse ist die Main-Methode, die ausgeführt wird. Es geht darum, den grössten gemeinsamen Teiler von zwei Zahlen auszurechnen. [Wikipedia-Link zum GgT](https://de.wikipedia.org/wiki/Gr%C3%B6%C3%9Fter_gemeinsamer_Teiler) 
 
 
 Es gibt mehrere Möglichkeiten dafür. Zwei davon sind der klassiche euklidische Algorithmus und der moderne euklidischen Algorithmus. 
