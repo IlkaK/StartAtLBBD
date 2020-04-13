@@ -24,5 +24,7 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 ## 3. Java ## 
 
+[Details zum ersten Kapitel](./doku/JavaBuch/01_Kapitel/Details.md)
+
 [Fragen zum ersten Kapitel](./doku/JavaBuch/01_Kapitel/Fragen.md)
 
