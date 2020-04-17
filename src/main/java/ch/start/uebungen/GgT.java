@@ -20,8 +20,7 @@ public class GgT {
 //		for(int i=0; i<args.length; i++) {
 //			System.out.println(i+": "+args[i]);
 //		}
-		
-		
+				
 		if(args.length>0) {
 			GgTMethod methodToUse = GgTMethod.valueOf(args[0]); //klassisch [0], modern [1]
 			System.out.println("Verwende: " + methodToUse);
@@ -39,6 +38,7 @@ public class GgT {
 				if (ersteZahl == zweiteZahl) {
 					System.out.println("\nDie Zahlen sind identisch. Probiere es erneut.");				
 				}
+				
 			}while (zweiteZahl == ersteZahl);
 			
 //			Herausfinden welche Zahl ist kleiner/grösse
