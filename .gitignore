@@ -3,3 +3,4 @@ target/
 .project
 doku/GitCrashkurs/git.pptx
 /build/
+logs/
