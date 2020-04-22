@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class GgT {
 	
-	static public final Scanner s = new Scanner(System.in);
+	static public final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		GgT ggt = new GgT();
 		int ersteZahl; //erste Zahl die eingelesen wird
 		int zweiteZahl; //zweite Zahl die eingelesen wird
 		int kleineZahl; //kleinere der beiden Zahlen
@@ -29,12 +28,12 @@ public class GgT {
 
 //			Einlesen erste Zahl
 			System.out.println("\nErste Zahl: ");
-			ersteZahl = Integer.parseInt(s.nextLine());
+			ersteZahl = Integer.parseInt(scanner.nextLine());
 			
 //			Einlesen zweite Zahl, so lange bis zweite Zahl nicht gleich erste Zahl		
 			do {
 				System.out.println("\nZweite Zahl: ");
-				zweiteZahl = Integer.parseInt(s.nextLine());
+				zweiteZahl = Integer.parseInt(scanner.nextLine());
 				if (ersteZahl == zweiteZahl) {
 					System.out.println("\nDie Zahlen sind identisch. Probiere es erneut.");				
 				}
