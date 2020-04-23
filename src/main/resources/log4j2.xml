@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 	<Appenders>
+		<SMTP name="SMTPAppender"
+                    smtpProtocol="smtps"
+                    smtpPort="25"
+                    subject="My Server Error Log"
+                    to="nadineeisenring@bluewin.ch"
+                    from="nad.eisenring@gmail.com"
+                    smtpHost="localhost"
+                    bufferSize="50"> 
+        </SMTP>
 		<Console name="Stdout" target="SYSTEM_OUT">
 			<PatternLayout
-				pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
+				pattern="[%-5level] %d{yyyy.mm.dd} %d{HH:mm:ss.SSS} - %logger{36}.%M: %msg%n" />
 		</Console>
 		<File name="LogToFile" fileName="logs/app.log">
 			<PatternLayout>
-				<pattern>%d %p %C{1.} [%t] %m%n</pattern>
+				<pattern>[%-5level] %d{yyyy.mm.dd} %d{HH:mm:ss.SSS} - %logger{36}.%M: %msg%n</pattern>
 			</PatternLayout>
 		</File>
 	</Appenders>
 	<Loggers>
-		<Logger name="main.java.ch.start.uebungen" level="warn">
-			<AppenderRef ref="Stdout" />
-		</Logger>
-		<Root level="error">
-			<AppenderRef ref="LogToFile" />
+		<Root level="all">
+		  <AppenderRef ref="LogToFile" level="DEBUG"/>
+		  <AppenderRef ref="Stdout" level="WARN"/>
+		  <AppenderRef ref="Stdout" level="ERROR"/>
+		  <AppenderRef ref="SMTPAppender" level="ERROR"/>
+		  <AppenderRef ref="LogToFile" level="INFO"/>
 		</Root>
 	</Loggers>
 </Configuration>
