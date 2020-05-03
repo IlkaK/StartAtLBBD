@@ -35,3 +35,5 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 3. [Der steinsche Algorithmus zur Berechnung des ggT](./doku/JavaBuch/02_03_04_Kapitel/Steinsche_Algorithmus.md)
 
 4. [Logging mit Log4J 2](./doku/JavaBuch/05_bis_11_Kapitel/Logging_Aufgabe.md)
+
+5. [Logging mit Slf4J, Logback und Vergleich zu Log4J 2](./doku/JavaBuch/05_bis_11_Kapitel/Logback_Aufgabe.md)

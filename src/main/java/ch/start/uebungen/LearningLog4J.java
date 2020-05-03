@@ -10,10 +10,7 @@ public class LearningLog4J {
 	
 	public static void main(String[] args) {
 		Logger logger = LogManager.getLogger(LearningLog4J.class);
-		logger.debug("Debug log message");
-        logger.info("Info log message");
-        logger.error("Error log message");
-        logger.warn("Warning log message");
+		logger.info("Log4J2 application.");
 	}
 
 }
