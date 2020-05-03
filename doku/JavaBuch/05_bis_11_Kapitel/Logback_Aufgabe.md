@@ -47,6 +47,8 @@ Den Code von Logback finden wir auf [Github](https://github.com/qos-ch/logback) 
 
 ## Übung zum Verlgeich von Logback und Log4J 2 ## 
 
+Ich habe dem Projekt weitere Bibliotheken zu Logback und Slf4J hinzugefügt. Ggf. musst Du die ebenfalls bei Dir im Classpath von Eclipe hinzugefügen (wie in 
+
 Was machen Logback und Log4J 2 jetzt anders bezüglich Slf4J?
 Vielleicht liegt der Unterschied eher im Detail.
 
