@@ -37,3 +37,5 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 4. [Logging mit Log4J 2](./doku/JavaBuch/05_bis_11_Kapitel/Logging_Aufgabe.md)
 
 5. [Logging mit Slf4J, Logback und Vergleich zu Log4J 2](./doku/JavaBuch/05_bis_11_Kapitel/Logback_Aufgabe.md)
+
+6. [Lambda und Files](./doku/JavaBuch/14_bis_16_Kapitel/File_Lambda_Aufgabe.md)
