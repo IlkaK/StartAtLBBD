@@ -1,4 +1,4 @@
-package main.java.ch.start.uebungen;
+package ch.start.uebungen;
 
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;

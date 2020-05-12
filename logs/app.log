@@ -1,0 +1,72 @@
+2020-04-22 10:23:01,136 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -3
+2020-04-22 10:24:08,680 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -2
+2020-04-22 10:24:09,800 WARN c.s.u.GgT [main] Eingegebene erste Zahl: 12
+2020-04-22 10:36:54,322 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -12
+2020-04-22 10:36:54,322 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -12
+2020-04-22 10:36:55,770 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -12
+2020-04-22 10:36:55,770 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -12
+2020-04-22 10:37:14,629 ERROR c.s.u.GgT [main] Input ist keine Zahl
+2020-04-22 10:37:14,629 ERROR c.s.u.GgT [main] Input ist keine Zahl
+2020-04-22 10:37:17,812 ERROR c.s.u.GgT [main] Input ist keine Zahl
+2020-04-22 10:37:17,812 ERROR c.s.u.GgT [main] Input ist keine Zahl
+2020-04-22 10:37:20,327 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -1
+2020-04-22 10:37:20,327 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -1
+2020-04-22 10:37:22,500 WARN c.s.u.GgT [main] Zahl identisch mit erster Zahl: 23
+2020-04-22 10:37:22,500 WARN c.s.u.GgT [main] Zahl identisch mit erster Zahl: 23
+2020-04-22 10:40:06,160 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -13
+2020-04-22 10:41:22,285 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: 
+2020-04-22 10:44:34,501 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -34
+2020-04-22 10:44:41,787 ERROR c.s.u.GgT [main] Input ist keine Zahl
+2020-04-22 10:47:23,188 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -6
+2020-04-22 10:48:02,531 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -6
+2020-04-22 10:48:37,908 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -4
+2020-04-22 10:52:11,311 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -4
+2020-04-22 10:53:16,397 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -6
+2020-04-22 10:53:42,054 ERROR c.s.u.GgT [main] Input ist eine negative Zahl: -4
+[WARN ] 2020.55.22 10:55:53.737 - ch.start.uebungen.GgT.main: Zahl identisch mit erster Zahl: 23
+[ERROR] 2020.12.22 11:12:33.047 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -3
+[ERROR] 2020.12.22 11:12:33.047 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -3
+[ERROR] 2020.12.22 11:12:36.415 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -20
+[ERROR] 2020.12.22 11:12:36.415 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -20
+[ERROR] 2020.12.22 11:12:38.192 - ch.start.uebungen.GgT.eingebenInt: Input ist keine Zahl
+[ERROR] 2020.12.22 11:12:38.192 - ch.start.uebungen.GgT.eingebenInt: Input ist keine Zahl
+[ERROR] 2020.15.22 11:15:29.839 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -3
+[ERROR] 2020.15.22 11:15:29.839 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -3
+[ERROR] 2020.15.22 11:15:31.396 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -4
+[ERROR] 2020.15.22 11:15:31.396 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -4
+[ERROR] 2020.15.22 11:15:33.898 - ch.start.uebungen.GgT.eingebenInt: Input ist keine Zahl
+[ERROR] 2020.15.22 11:15:33.898 - ch.start.uebungen.GgT.eingebenInt: Input ist keine Zahl
+[WARN ] 2020.15.22 11:15:37.277 - ch.start.uebungen.GgT.main: Zahl identisch mit erster Zahl: 23
+[WARN ] 2020.15.22 11:15:37.277 - ch.start.uebungen.GgT.main: Zahl identisch mit erster Zahl: 23
+[ERROR] 2020.47.23 08:47:36.021 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -3
+[ERROR] 2020.47.23 08:47:42.662 - ch.start.uebungen.GgT.eingebenInt: Input ist keine Zahl
+[INFO ] 2020.47.23 08:47:44.991 - ch.start.uebungen.GgT.main: Eingegebene erste Zahl: 12
+[WARN ] 2020.47.23 08:47:47.011 - ch.start.uebungen.GgT.main: Zahl identisch mit erster Zahl: 12
+[INFO ] 2020.47.23 08:47:54.198 - ch.start.uebungen.GgT.main: Eingegebene zweite Zahl: 23
+[INFO ] 2020.47.23 08:47:54.198 - ch.start.uebungen.GgT.main: kleine Zahl: 12grosse Zahl: 23
+[ERROR] 2020.48.23 08:48:46.448 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -3
+[ERROR] 2020.48.23 08:48:48.452 - ch.start.uebungen.GgT.eingebenInt: Input ist keine Zahl
+[INFO ] 2020.48.23 08:48:52.125 - ch.start.uebungen.GgT.main: Eingegebene erste Zahl: 23
+[WARN ] 2020.48.23 08:48:55.993 - ch.start.uebungen.GgT.main: Zahl identisch mit erster Zahl: 23
+[INFO ] 2020.49.23 08:49:00.406 - ch.start.uebungen.GgT.main: Eingegebene zweite Zahl: 24
+[INFO ] 2020.49.23 08:49:00.406 - ch.start.uebungen.GgT.main: kleine Zahl: 23grosse Zahl: 24
+[ERROR] 2020.30.23 09:30:32.508 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -3
+[ERROR] 2020.30.23 09:30:35.092 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -3
+[INFO ] 2020.30.23 09:30:36.244 - ch.start.uebungen.GgT.main: Eingegebene erste Zahl: 12
+[WARN ] 2020.30.23 09:30:37.364 - ch.start.uebungen.GgT.main: Zahl identisch mit erster Zahl: 12
+[INFO ] 2020.30.23 09:30:38.478 - ch.start.uebungen.GgT.main: Eingegebene zweite Zahl: 22
+[INFO ] 2020.30.23 09:30:38.478 - ch.start.uebungen.GgT.main: kleine Zahl: 12 - grosse Zahl: 22
+[ERROR] 2020.50.23 09:50:45.582 - ch.start.uebungen.GgT.eingebenInt: Input ist eine negative Zahl: -3
+[INFO ] 2020.50.23 09:50:46.396 - ch.start.uebungen.GgT.main: Eingegebene erste Zahl: 12
+[INFO ] 2020.50.23 09:50:48.463 - ch.start.uebungen.GgT.main: Eingegebene zweite Zahl: 13
+[INFO ] 2020.50.23 09:50:48.465 - ch.start.uebungen.GgT.main: kleine Zahl: 12 - grosse Zahl: 13
+[INFO ] 2020.34.04 07:34:01.529 - ch.start.uebungen.GgT.main: Eingegebene erste Zahl: 20
+[INFO ] 2020.34.04 07:34:03.494 - ch.start.uebungen.GgT.main: Eingegebene zweite Zahl: 36
+[INFO ] 2020.34.04 07:34:03.495 - ch.start.uebungen.GgT.main: kleine Zahl: 20 - grosse Zahl: 36
+[INFO ] 2020.36.04 07:36:26.603 - ch.start.uebungen.GgT.main: Eingegebene erste Zahl: 36
+[INFO ] 2020.36.04 07:36:30.739 - ch.start.uebungen.GgT.main: Eingegebene zweite Zahl: 46
+[INFO ] 2020.36.04 07:36:30.740 - ch.start.uebungen.GgT.main: kleine Zahl: 36 - grosse Zahl: 46
+[INFO ] 2020.37.04 07:37:22.118 - ch.start.uebungen.GgT.main: Eingegebene erste Zahl: 45
+[INFO ] 2020.37.04 07:37:25.431 - ch.start.uebungen.GgT.main: Eingegebene zweite Zahl: 36
+[INFO ] 2020.37.04 07:37:25.432 - ch.start.uebungen.GgT.main: kleine Zahl: 36 - grosse Zahl: 45
+[INFO ] 2020.05.04 16:05:42.803 - ch.start.uebungen.LearningLog4J.main: Log4J2 application.
