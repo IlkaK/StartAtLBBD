@@ -8,11 +8,13 @@ public class GgT {
 	
 	static public final Scanner scanner = new Scanner(System.in);
 	static public final Logger logger = LogManager.getLogger(GgT.class);
+	int kleineZahl; //kleinere der beiden Zahlen
+	int grosseZahl; //gr�ssere der beiden Zahlen
 	
 	//Methode um int eingebe zu �berpr�fen, Input darf nicht negativ oder ein String sein.
 	public int eingebenInt() {
+		int zahl;
 		try {
-			int zahl;
 		    do { //Loop bis Input korrekt ist
 		    	System.out.println("Nur positive Zahlen sind erlaubt.");
 			    while (!scanner.hasNextInt()){ //�berpr�ft Datentyp
@@ -28,11 +30,24 @@ public class GgT {
 			return zahl;
 		}catch(Exception e) {
 	    	logger.error("Es ist ein Fehler beim Input aufgetreten.");
+	    	System.exit(0);
 		}
 		return 0;
 	}
 	
-	int steinischerAlg(int grosseZahl, int kleineZahl) {
+	public void validateZahl(int ersteZahl, int zweiteZahl) {
+//		Herausfinden welche Zahl ist kleiner/gr�sse
+		if (ersteZahl > zweiteZahl) {
+			grosseZahl = ersteZahl;
+			kleineZahl = zweiteZahl;
+		}else {
+			grosseZahl = zweiteZahl;
+			kleineZahl = ersteZahl;
+		}
+		logger.info("kleine Zahl: " + kleineZahl + " - grosse Zahl: " + grosseZahl);
+	}
+	
+	public int steinischerAlg(int grosseZahl, int kleineZahl) {
 	    if (grosseZahl == 0) {
 	        return kleineZahl;
 	    } 
@@ -64,7 +79,34 @@ public class GgT {
 	    } while (kleineZahl != 0);
 	    return grosseZahl << n;
 	}
-	
+
+	/**
+	 * @return the kleineZahl
+	 */
+	public int getKleineZahl() {
+		return kleineZahl;
+	}
+
+	/**
+	 * @param kleineZahl the kleineZahl to set
+	 */
+	public void setKleineZahl(int kleineZahl) {
+		this.kleineZahl = kleineZahl;
+	}
+
+	/**
+	 * @return the grosseZahl
+	 */
+	public int getGrosseZahl() {
+		return grosseZahl;
+	}
+
+	/**
+	 * @param grosseZahl the grosseZahl to set
+	 */
+	public void setGrosseZahl(int grosseZahl) {
+		this.grosseZahl = grosseZahl;
+	}
 
 	public static void main(String[] args) {
 		GgT ggt = new GgT();
@@ -104,16 +146,11 @@ public class GgT {
 			}while (zweiteZahl == ersteZahl);
 		    logger.info("Eingegebene zweite Zahl: " + zweiteZahl);
 			
-//			Herausfinden welche Zahl ist kleiner/gr�sse
-			if (ersteZahl > zweiteZahl) {
-				grosseZahl = ersteZahl;
-				kleineZahl = zweiteZahl;
-			}else {
-				grosseZahl = zweiteZahl;
-				kleineZahl = ersteZahl;
-			}
-			logger.info("kleine Zahl: " + kleineZahl + " - grosse Zahl: " + grosseZahl);
-			
+		    ggt.validateZahl(ersteZahl, zweiteZahl);
+		    kleineZahl = ggt.getKleineZahl();
+		    grosseZahl = ggt.getGrosseZahl();
+		    
+		    
 //			�berpr�fen, welche methode verwendet wird
 			switch(methodToUse) {
 			  case KLASSISCHER_EUKLIDES:
@@ -130,7 +167,8 @@ public class GgT {
 				}
 			    break;
 			  case STEINSCH_ALGORITHMUS:
-				ggt.steinischerAlg(grosseZahl, kleineZahl);
+				resultat = ggt.steinischerAlg(grosseZahl, kleineZahl);
+				break;
 			}
 			
 			System.out.println("\nDer gr�sste gemeinsame Teiler lautet: " + resultat);
