@@ -42,4 +42,4 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 ## 4. Spring ##
 
-1. [Container, Dependency, and IOC](.doku/SpringKurs/01_Container.md)
+1. [Container, Dependency, and IOC](./doku/SpringKurs/01_Container.md)
