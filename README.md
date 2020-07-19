@@ -42,4 +42,22 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 ## 4. Spring ##
 
+0. [Begriffe/Terms](./doku/SpringKurs/00_Terms.md)
+
 1. [Container, Dependency, and IOC](./doku/SpringKurs/01_Container.md)
+
+2. [Aspect oriented programming](./doku/SpringKurs/02_Aspects.md)
+
+3. [Data Management, JDBC, Transactions](./doku/SpringKurs/03_Data_Management.md)
+
+4. [Spring Data JPA](./doku/SpringKurs/04_JPA.md)
+
+5. [Spring MVC and the Web Layer](./doku/SpringKurs/05_MVC.md)
+
+6. [Security](./doku/SpringKurs/06_Security.md)
+
+7. [REST](./doku/SpringKurs/07_REST.md)
+
+8. [Testing](./doku/SpringKurs/08_Testing.md)
+
+9. [Spring Boot Intro](./doku/SpringKurs/09_Spring_Boot.md)
