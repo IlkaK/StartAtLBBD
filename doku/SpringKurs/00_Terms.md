@@ -18,12 +18,12 @@
 
 - leightweight: Spring ist leichtgewichtig, da es nicht als grosse ganze Einheit verwendet muss, sondern nur Teile davon verwendet werden können
 
--> Z.B. verwenden wir im Projekt Spring MVC mit Rest, aber andere Komponenten, wie z.B. Spring Batch dann wieder nicht.
+Z.B. verwenden wir im Projekt Spring MVC mit Rest, aber andere Komponenten, wie z.B. Spring Batch dann wieder nicht.
+Unter folgendem Link habe ich eine Variation von Antworten gefunden:
+[Diskussion über leightweight](https://stackoverflow.com/questions/8117166/what-makes-the-spring-framework-a-lightweight-container#:~:text=Spring%20calls%20itself%20'lightweight'%20because,according%20to%20your%20required%20module).
+Spring ist leichtgewichtig gegenüber EJB. Mit EJB [Java Enterprise Beans](https://de.wikipedia.org/wiki/Enterprise_JavaBeans) z.B. im Zusammenhang mit JBoss als Applikationsserver kommen viele Abhängigkeiten, die Spring nicht hat.
 
--> Unter folgendem Link habe ich eine Variation von Antworten gefunden:
-[Diskussion über leightweight](https://stackoverflow.com/questions/8117166/what-makes-the-spring-framework-a-lightweight-container#:~:text=Spring%20calls%20itself%20'lightweight'%20because,according%20to%20your%20required%20module)
-
--> Spring ist leichtgewichtig gegenüber EJB. Mit EJB [Java Enterprise Beans](https://de.wikipedia.org/wiki/Enterprise_JavaBeans) z.B. im Zusammenhang mit JBoss als Applikationsserver kommt relativ viele Abhängigkeiten. 
+----
 
 - repository: Aufbewahrung oder Depot, bei dem Stichwort geht es immer um die Persistenz von Daten, also meistens Datenbanken
 
