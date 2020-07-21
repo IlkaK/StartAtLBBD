@@ -14,7 +14,9 @@
 
 - dependency injection: wenn der Container ein Bean erstellt, füllt/injiziert (injects) er die Abhängigkeiten (dependencies) des Beans ab
 
-----
+-----
+
+### Leichtgewichtig ###
 
 - leightweight: Spring ist leichtgewichtig, da es nicht als grosse ganze Einheit verwendet muss, sondern nur Teile davon verwendet werden können
 
@@ -23,7 +25,9 @@ Unter folgendem Link habe ich eine Variation von Antworten gefunden:
 [Diskussion über leightweight](https://stackoverflow.com/questions/8117166/what-makes-the-spring-framework-a-lightweight-container#:~:text=Spring%20calls%20itself%20'lightweight'%20because,according%20to%20your%20required%20module).
 Spring ist leichtgewichtig gegenüber EJB. Mit EJB [Java Enterprise Beans](https://de.wikipedia.org/wiki/Enterprise_JavaBeans) z.B. im Zusammenhang mit JBoss als Applikationsserver kommen viele Abhängigkeiten, die Spring nicht hat.
 
-----
+-----
+
+### Components ###
 
 - repository: Aufbewahrung oder Depot, bei dem Stichwort geht es immer um die Persistenz von Daten, also meistens Datenbanken
 
@@ -41,8 +45,19 @@ Spring ist leichtgewichtig gegenüber EJB. Mit EJB [Java Enterprise Beans](https
 
 -----
 
+### Bootstrapping ###
 
-- bootstrapped:
+- bootstrapped: wird häufig verwendet auch als Synonym für booting, eine Kette von Ereignissen, um z.B. einen PC zu starten, wobei dann das Betriebssystem jeweils das Aufstarten der Programme übernimmt
+
+[Bootstrapping, Abschnitt Applications, Software Development](https://en.wikipedia.org/wiki/Bootstrapping)
+
+Wenn vom Bootstrapping in Spring geredet wird, ist damit die Abfolge von Prozessen gemeint, bis die effektive Spring-Applikation gestartet ist, [Bootstrapping in Spring](https://stackoverflow.com/questions/21714290/how-is-spring-actually-bootstrap)
+
+-----
+
+- sub contexts: 
+
+-----
 
 - proxys
 
