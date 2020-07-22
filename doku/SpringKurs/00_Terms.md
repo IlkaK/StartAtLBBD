@@ -8,7 +8,7 @@
 
 - IoC Inversion of Control: der Prozess, in dem ein Objekt definiert, welche Abhängigkeiten es hat, aber diese nicht selber erstellt
 
-- Spring IoC container: das Gefäss, in dem die Objekte leben und welches zusätzlich ihre Abhängigkeiten managt
+- Spring IoC Container: das Gefäss, in dem die Objekte leben und welches zusätzlich ihre Abhängigkeiten managt
 
 - Spring bean: alle Objekte, die in dem Spring IoC container leben
 
@@ -37,25 +37,34 @@ Spring ist leichtgewichtig gegenüber EJB. Mit EJB [Java Enterprise Beans](https
 
 - POJOs: Plain Old Java Objects => Das sind ganz normale Klassen mit Attributen und Get- und Set-Methoden.
 
-- application context: ein erweiterter Spring-Container, der die Beans managt
-
 - singleton: von einer Klasse wird nur ein einziges Objekt erzeugt, meistens darf es in dem Kontext, wo es erzeugt wird, auch nur ein einziges geben
 
 - singleton beans: Das sind Beans, von denen nur eine einzelne Instanz im Spring Container erzeugt wird. Sämtliche andere Möglichkeiten: [bean scopes](https://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s04.html)
 
 -----
 
+### Application Context ###
+
+Das ApplicationContext Interface und das BeanFactory Interface repräsentieren den Spring IoC Container.
+
+- Bean Factory: das zugrunde liegende Interface, welches auf den Container zugreift und die Basisfunktionalitäten zum Managen der Beans bereitstellt.
+
+- Application Context: ist ein von der Bean Factory abgeleitetes Interface (also ein Sub-Interface), welches alle Funktionalitäten der Bean Factory beinhaltet und noch zusätzliche enthält.
+
+Es gibt verschiedene Implementationen vom Application Context, z.B. AnnotationConfigApplicationContext.
+Eine Übersicht ist z.B. [hier](https://www.baeldung.com/spring-application-context) zu finden.
+
+Falls man mehrere Application Contexts hat, sind sie isoliert voneinander, wie [hier](https://stackoverflow.com/questions/29862681/java-spring-multiple-applicationcontext) in der ersten Antwort beschrieben wird. In der zweiten Antwort wird beschrieben, dass das in MVC Spring nicht unüblich ist.
+
+-----
+
 ### Bootstrapping ###
 
-- bootstrapped: wird häufig verwendet auch als Synonym für booting, eine Kette von Ereignissen, um z.B. einen PC zu starten, wobei dann das Betriebssystem jeweils das Aufstarten der Programme übernimmt
+- bootstrapping: wird häufig verwendet als Synonym für booting oder initialisieren und bedeutet eine Kette von Ereignissen, um z.B. einen PC zu starten, wobei dann das Betriebssystem jeweils das Aufstarten der Programme übernimmt
 
 [Bootstrapping, Abschnitt Applications, Software Development](https://en.wikipedia.org/wiki/Bootstrapping)
 
 Wenn vom Bootstrapping in Spring geredet wird, ist damit die Abfolge von Prozessen gemeint, bis die effektive Spring-Applikation gestartet ist, [Bootstrapping in Spring](https://stackoverflow.com/questions/21714290/how-is-spring-actually-bootstrap)
-
------
-
-- sub contexts: 
 
 -----
 
