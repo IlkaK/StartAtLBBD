@@ -44,7 +44,7 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 0. [Begriffe/Terms](./doku/SpringKurs/00_Terms.md)
 
-1. [Container, Dependency, and IOC](./doku/SpringKurs/01_Container.md)
+1. [Container, Dependency, and IoC](./doku/SpringKurs/01_Container.md)
 
 2. [Aspect oriented programming](./doku/SpringKurs/02_Aspects.md)
 
