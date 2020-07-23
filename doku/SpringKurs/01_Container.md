@@ -30,3 +30,15 @@ Advantages of interfaces:
 
 Concrete classes also work very well as Spring beans. If you use an interface e.g. for the database layer, the implemented database class underneath can be changed easier.
 Spring usage is said to be more smooth while using interfaces.
+
+
+### 4. What is meant by Application context? ###
+
+Das haben wir bei den Begriffen schon gemacht: [Gefässe und Abhängigkeiten](./00_Terms.md)
+
+----
+
+als nächstes:
+- Can you describe the lifecycle of a Spring Bean in an Application Context?
+- How are you goint to create an Application Context in an integration test?
+- What is the preferred way to close an Application Context? Does Spring Boot do this for you?
