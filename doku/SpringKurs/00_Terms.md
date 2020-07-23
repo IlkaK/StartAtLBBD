@@ -68,8 +68,19 @@ Wenn vom Bootstrapping in Spring geredet wird, ist damit die Abfolge von Prozess
 
 -----
 
-- proxys
+### Classpath ###
 
-- classpath
+- classpath: der Pfad, wo die Applikation nach Benutzerklassen suchen soll
 
-- working directory
+[Hier](https://stackoverflow.com/questions/2396493/what-is-a-classpath-and-how-do-i-set-it) wird recht gut erklärt, wie die Zusammenhänge zwischen .class, .jar und Classpath sind.
+
+- working directory: `System.getProperty("user.dir")`
+
+-----
+
+### Proxy ###
+
+- proxys: ein Proxy ist ein Platzhalter für ein Objekt, welches aufgerufen wird, und leitet dann weiter an das Objekt. Es sitzt quasi zwischen dem Objekt und dem Aufrufer (Caller)
+
+
+Proxys erklärt im Spring Blog, im ersten Abschnitt: [What are proxys and why do we use them?](https://spring.io/blog/2007/07/19/debunking-myths-proxies-impact-performance/)
