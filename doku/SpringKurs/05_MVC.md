@@ -9,12 +9,22 @@ The big idea behind it: each section of code has a purpose and those purposes ar
 2. code for GUI
 3. code that controls how the application works
 
+[Link zur deutschen Wikipedia-Seite zum Model-View-Controller](https://de.wikipedia.org/wiki/Model_View_Controller)
+
+Im Projekt heissen die einzelnen Komponenten sogar so: die Controller sind die RestController (z.B. der CountryThresholdController von Dir), das Datenmodell ist unter Model, die einzelnen dto-Klassen, zu finden. Zum View-Teil gehören die Typescript und html-Seiten.
+
+Hier ist das MVC-Patter in Spring ebenfalls noch mal mit einer Grafik erklärt: [Javatpoint](https://www.javatpoint.com/spring-mvc-tutorial#:~:text=Spring%20Web%20Model%2DView%2DController,the%20class%20as%20the%20controller.)
+
+Und das [Tutorial von Baeldung dazu](https://www.baeldung.com/spring-mvc-tutorial)
+
 ### What is the DispatcherServlet and what is it used for? ###
 
 The DispatcherServlet acts as a FrontController.
 It receives all incoming requests and delegates to other components for further processing to 
 1. Spring MVC Controllers (@Controller) or
 2. ViewResolvers like InternalResourceViewResolver
+
+Das bei uns im Projekt kommt vom slx Framework und ist unter slx-core-common spring ServletDelegate zu finden.
 
 ### What is a web application context? What extra scopes does it offer? ###
 
