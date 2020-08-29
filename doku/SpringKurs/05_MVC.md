@@ -82,4 +82,4 @@ http://localhost:8080/accounts/1234?overdrawn=true
 
 ### What are some of the valid return types of a controller method? ####
 
-- Model and View object, Model object, Map, View, String void
+- Model and View object, Model object, Map, View, String, void
