@@ -4,16 +4,18 @@
 
 - "Re"presentational "S"tate "T"ransfer
 
-R in Rest is the URL part, the S is more important for scaling: state.
+R in Rest is the URL part, the S (state) is more important for scaling.
 
 - Rest is an architectural style that describes best practices to expose web services over HTTP
 - uses HTTP as application protocol, not just transport
+
+[Http](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol) is a stateless protocol to transfer data via an application layer within a computer network.
+
 - makes it easier for systems to communicate with each other
-- Rest-compliant systems <=> Restful systems
-- is stateless 
+
 - separates concerns of client and server
 
-### Is REST normally stateless? ###
+### Is REST normally stateless (zustandslos)? ###
 
 - yes, there is not http session usage
 - GETs can be cached on URL 
@@ -37,6 +39,11 @@ You still have data stores. You still have authentication and authorization. You
 [Stackoverflow: How do you manage sessions in stateless rest applications?](https://stackoverflow.com/questions/3105296/if-rest-applications-are-supposed-to-be-stateless-how-do-you-manage-sessions#:~:text=Stateless%20means%20the%20state%20of,known%20from%20any%20prior%20request.)
 
 ### Is REST scalable and/or interoperable? ###
+
+What is scalability?
+[Skalierbarkeit](https://de.wikipedia.org/wiki/Skalierbarkeit) / scalability means that a system can handle growing work by adding more ressources.
+
+[Horizontale Skalierbarkeit](https://de.wikipedia.org/wiki/Skalierbarkeit#Horizontale_Skalierung_(scale_out))
 
 Rest is scalable and interoperable. It does not mandate a specific choice of technology on client or server side.
 
