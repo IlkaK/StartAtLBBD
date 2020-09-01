@@ -41,9 +41,14 @@ You still have data stores. You still have authentication and authorization. You
 ### Is REST scalable and/or interoperable? ###
 
 What is scalability?
+
 [Skalierbarkeit](https://de.wikipedia.org/wiki/Skalierbarkeit) / scalability means that a system can handle growing work by adding more ressources.
 
-[Horizontale Skalierbarkeit](https://de.wikipedia.org/wiki/Skalierbarkeit#Horizontale_Skalierung_(scale_out))
+Infos zur [Horizontalen Skalierbarkeit](https://de.wikipedia.org/wiki/Skalierbarkeit#Horizontale_Skalierung_(scale_out))
+
+What is interoperability?
+
+[Interoperabilität](https://de.wikipedia.org/wiki/Interoperabilit%C3%A4t) / interoperability means different systems can work with each other smoothly.
 
 Rest is scalable and interoperable. It does not mandate a specific choice of technology on client or server side.
 
