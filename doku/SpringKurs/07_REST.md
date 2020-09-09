@@ -62,17 +62,57 @@ The server end of REST is stateless, which means that the server doesn't have to
 - the constraint of statelessness is enforces through the use of resources rather than commands
 - resources are the noans of the Web and describe any object/document/thing that you may need to store or send to other services
 
+
+-------
+
+
 ### What does CRUD mean? ###
+
+- Create, Read (or Retrieve), Update, Delete (or Destroy)
+
+Es geht um das Anlegen, Lesen, Verändern und Löschen von Datensätzen, also um die Grundlagen um Daten zu verwenden und zu verändern.
+
+Bei HTML/Rest findet sich CRUD unter folgenden Operationen wieder:
+
+- Create	 -> PUT oder POST
+- Read -> GET
+- Update -> PATCH oder PUT
+- Delete -> DELETE
+
+[Crud auf Wikipedia](https://de.wikipedia.org/wiki/CRUD)
+
 
 ### Is REST secure? What can you do to secure it? ###
 
+Since REST is stateless, each request needs to be authenticated and authorized. It cannot depend on cookies or sessions. "Instead, each API request should come with some sort authentication credentials which must be validated on the server for every request."
+
+[Rest Tutorial](https://restfulapi.net/security-essentials/#:~:text=Security%20isn't%20an%20afterthought.&text=There%20are%20multiple%20ways%20to,depend%20on%20cookies%20or%20sessions.)
+
+
+Spring Security can can be set up in a Web Environment. Three steps are necessary:
+
+1. Setup Filter Chain (Spring Boot does that) => slx framework übernimmt das für uns
+
+2. Configure security (authorization) rules => Berechtigungsobjekte werden festgelegt und auf den Java Methoden/Klassen gesetzt, die via REST aufgerufen werden. Sobald bekannt ist, welcher Benutzer sich eingeloggt hat, kann ermittelt werden, ob er die entsprechenden Berechtigungsobjekte hat, um eine Methode/Klasse aufzurufen.
+
+3. Setup Web Authentication => Zertifikate werden ausgetauscht, anhand dessen bestimmt wird, ob ein Benutzer (mit diesem Zertifikat) generell bekannt ist und Zugriff hat oder nicht.
+
+
+[Security => What are authentication and authorization?](./06_Security.md)
 
 
 ### Which HTTP methods does REST use? ###
 
+REST can use any HTTP method. Most popular ones are:
+- GET for retrieving a source
+- POST for craeting a resource
+- PUT for updating
+- DELETE for removing
+
+
+-------
+
 ### What is an HttpMessageConverter? ###
-
-
 
 ### What does @RequestMapping do? ###
 
