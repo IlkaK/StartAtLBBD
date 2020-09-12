@@ -71,3 +71,16 @@ application.yml:
 - application_{profile}.properties 
 - in yml: spring: profiles: <profiles>
 
+### How do you define profile specific property files? ###
+
+### How do you access the properties defined in the property files? ###
+
+### What properties do you have to define in order to configure external MySQL? ###
+
+### How do you configure default schema and initial data? ###
+
+### What is a fat FAR/JAR? How is it different from the original JAR? ###
+
+### What is the difference between an embedded container and a WAR? ###
+
+### What embedded containers does Spring Boot support? ###
