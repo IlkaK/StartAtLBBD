@@ -114,11 +114,54 @@ REST can use any HTTP method. Most popular ones are:
 
 ### What is an HttpMessageConverter? ###
 
+It converts http requests/responses body data (object into text conversion).
+
+Message converters marshall and unmarshall Java Objects to and from JSON, XML, etc – over HTTP.
+The client server conversation uses Json. When receiving a request (from the client), Spring uses the Accept header to define the media type of the response.
+
+Quick example from [Baeldung](https://www.baeldung.com/spring-httpmessageconverter-rest):
+
+- The Client sends a GET request to /foos with the Accept header set to application/json. He wants to get all Foo resources as JSON.
+- The Foo Spring Controller is hit and returns the corresponding Foo Java entities
+- Spring then uses one of the Jackson (e.g. MappingJacksonHttpMessageConverter) message converters to marshall the entities to JSON
+
+For that the response data needs the annotation @ResponseBody.
+The conversion is automatically set up by SpringBoot.
+
 ### What does @RequestMapping do? ###
+
+It maps web /http requests to Spring Controller methods. It allows the same URL to be mapped to multiple Java methods.
+
+E.g. both of the following methods map to the same URL "/ex/foos" but the first one only response to GET requests the second one only to POST requests.
+
+```
+@RequestMapping(value = "/ex/foos", method = RequestMethod.GET)
+@ResponseBody
+public String getFoosBySimplePath() {
+    return "Get some Foos";
+}
+```
+
+```
+@RequestMapping(value = "/ex/foos", method = POST)
+@ResponseBody
+public String postFoos() {
+    return "Post some Foos";
+}
+```
 
 ### Is @Controller a stereotype? Is @RestController a stereotype? ###
 
+Both are stereotype annotations.
+
+@RestController combines @Controller and @ResponseBody, so no need to annotate every request handling method of the controller class with @ResponseBody annotation. 
+
 ### What is a stereotype annotation? What does that mean? ###
+
+Simplifying object creation, Spring automatically creates a Bean from a stereotype.
+If the correct stereotype is used on a bean, then Spring is directed in the right direction and knows what kind of bean it has.
+
+E.g. a controller's role in MVC pattern is to direct traffic and route requests (@Controller) or a repository is a place to implement data access layers for various persistence stores. The example is taken from [here](https://www.danvega.dev/blog/2017/03/27/spring-stereotype-annotations/).
 
 ### What is the difference between @Controller and @RestController? ###
 
