@@ -165,20 +165,54 @@ E.g. a controller's role in MVC pattern is to direct traffic and route requests 
 
 ### What is the difference between @Controller and @RestController? ###
 
+The @RestController annotation in Spring MVC is a combination of @Controller and @ResponseBody annotation.
+
+The job of @Controller is to create a Map of the model object and find a view but @RestController simply returns the object and object data is directly written into HTTP response as JSON or XML.
+
+This can also be done with traditional @Controller and use @ResponseBody annotation but since this is the default behavior of RESTful Web services, Spring introduced @RestController which combined the behavior of @Controller and @ResponseBody together.
+
+[Information from here](https://javarevisited.blogspot.com/2017/08/difference-between-restcontroller-and-controller-annotations-spring-mvc-rest.html#ixzz6ee6SW1WC)
+
 ### When do you need @ResponseBody? ###
 
-### What are the HTTP status return codes for a successful GET, POST, PUT or DELETE opreation? ###
+You need the annotation when you define a Rest response.
+
+### What are the HTTP status return codes for a successful GET, POST, PUT or DELETE operation? ###
+
+- 201: created successfully
+- 400: client error
+- 405: http method not supported
+- 406: cannot generate response body in requested format
+- 415: request body not supported
 
 ### When do you need @ResponseStatus? ###
 
+When you want to specify other http status. For that you put @ResponseStatus on void methods.
+
 ### Where do you need @ResponseBody? What about @RequestBody? Try not to get these muddled up. ###
+
+- @RequestBody: method parameter is bound to the body of the http request
+- @ResponseBody: can be put on a method, it indicates the return type should be written straight to http response body
 
 ### If you saw example Controller code, would you understand what it is doing? Could you tell if it was annotated correctly? ###
 
+[ExampleController](../../src/main/java/ch/spring/rest/ExampleController.java)
+[ExampleRestController](../../src/main/java/ch/spring/rest/ExampleRestController.java)
+
 ### Do you need Spring MVC in your classpath? ###
+
+If you use Spring Boot, then yes.
 
 ### What Spring Boot starter would you use for a Spring REST application? ###
 
+Spring-boot-starter-web is used for a standard Spring Rest application.
+
 ### What are the advantages of the RestTemplate? ###
 
+- It provides accesss to Restful services.
+- It supports all the HTTP methods.
+
+
 ### If you saw an example using RestTemplate would you understand what it is doing? ###
+
+[ExampleRestTemplate](../../src/main/java/ch/spring/rest/ExampleRestTemplate.java)
