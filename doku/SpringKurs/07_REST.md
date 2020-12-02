@@ -105,7 +105,7 @@ Spring Security can can be set up in a Web Environment. Three steps are necessar
 
 REST can use any HTTP method. Most popular ones are:
 - GET for retrieving a source
-- POST for craeting a resource
+- POST for creating a resource
 - PUT for updating
 - DELETE for removing
 
@@ -117,38 +117,72 @@ REST can use any HTTP method. Most popular ones are:
 It converts http requests/responses body data (object into text conversion).
 
 Message converters marshall and unmarshall Java Objects to and from JSON, XML, etc – over HTTP.
-The client server conversation uses Json. When receiving a request (from the client), Spring uses the Accept header to define the media type of the response.
+
+When the server receives a request from the client, Spring uses the Accept header send by the client to define the media type of the response.
+
+```
+curl --header "Accept: application/json" 
+  http://localhost:8080/spring-boot-rest/foos/1
+ ```
 
 Quick example from [Baeldung](https://www.baeldung.com/spring-httpmessageconverter-rest):
 
-- The Client sends a GET request to /foos with the Accept header set to application/json. He wants to get all Foo resources as JSON.
+- The Client sends a GET request to /foos with the Accept header set to *application/json*. He wants to get all Foo resources as JSON.
 - The Foo Spring Controller is hit and returns the corresponding Foo Java entities
 - Spring then uses one of the Jackson (e.g. MappingJacksonHttpMessageConverter) message converters to marshall the entities to JSON
 
 For that the response data needs the annotation @ResponseBody.
 The conversion is automatically set up by SpringBoot.
 
+
 ### What does @RequestMapping do? ###
 
-It maps web /http requests to Spring Controller methods. It allows the same URL to be mapped to multiple Java methods.
+The @RequestMapping annotation can be applied to class-level and/or method-level in a controller. 
+The class-level annotation maps a specific request path or pattern onto a controller. 
+
+[Eine der ersten Annotationen auf dem ExampleRestControllers](../../src/main/java/ch/spring/rest/ExampleRestController.java)
+
+It also maps web /http requests to Spring Controller methods. It allows the same URL to be mapped to multiple Java methods.
 
 E.g. both of the following methods map to the same URL "/ex/foos" but the first one only response to GET requests the second one only to POST requests.
 
 ```
 @RequestMapping(value = "/ex/foos", method = RequestMethod.GET)
-@ResponseBody
 public String getFoosBySimplePath() {
     return "Get some Foos";
 }
 ```
 
 ```
-@RequestMapping(value = "/ex/foos", method = POST)
-@ResponseBody
+@RequestMapping(value = "/ex/foos", method = RequestMethod.POST)
 public String postFoos() {
     return "Post some Foos";
 }
 ```
+
+Statt ``RequestMapping(method = ...)`` verwenden wir die spezifischeren Annotation ``@GetMapping``, ``@PostMapping``, ``@PutMapping``, ``@DeleteMapping``.
+Das sind Ableitungen vom @RequestMapping, wobei jeweils ``method`` hard-codiert ist.
+
+[Nähere Infos dazu sind hier](https://www.logicbig.com/tutorials/spring-framework/spring-web-mvc/request-mapping-variants.html)
+
+[Auf den Methoden des ExampleRestControllers](../../src/main/java/ch/spring/rest/ExampleRestController.java)
+
+Die Definition von consumes und produces sollte im @RequestMapping eigentlich nicht (mehr) notwendig sein (siehe der Kommentar von [Hynes auf der Diskussion im Stackoverflow](https://stackoverflow.com/questions/35123835/spring-requestmapping-for-controllers-that-produce-and-consume-json) Diese wird vom Accept Header des Client Requests vorgegeben.
+
+[Auf der @RequestMapping Annotation des ExampleRestControllers](../../src/main/java/ch/spring/rest/ExampleRestController.java)
+
+### When do you need @ResponseBody? ###
+
+You need the annotation when you define a Rest response and your service is not annotated with @RestController.
+
+### Where do you need @ResponseBody? What about @RequestBody? Try not to get these muddled up. ###
+
+- @RequestBody: method parameter is bound to the body of the http request
+- @ResponseBody: can be put on a method, it indicates the return type should be written straight to http response body.
+
+[Am Anfang vom ExampleRestController](../../src/main/java/ch/spring/rest/ExampleRestController.java)
+
+-------
 
 ### Is @Controller a stereotype? Is @RestController a stereotype? ###
 
@@ -173,9 +207,7 @@ This can also be done with traditional @Controller and use @ResponseBody annotat
 
 [Information from here](https://javarevisited.blogspot.com/2017/08/difference-between-restcontroller-and-controller-annotations-spring-mvc-rest.html#ixzz6ee6SW1WC)
 
-### When do you need @ResponseBody? ###
-
-You need the annotation when you define a Rest response.
+-------
 
 ### What are the HTTP status return codes for a successful GET, POST, PUT or DELETE operation? ###
 
@@ -189,15 +221,15 @@ You need the annotation when you define a Rest response.
 
 When you want to specify other http status. For that you put @ResponseStatus on void methods.
 
-### Where do you need @ResponseBody? What about @RequestBody? Try not to get these muddled up. ###
+### When do you need @ResponseEntity? ###
 
-- @RequestBody: method parameter is bound to the body of the http request
-- @ResponseBody: can be put on a method, it indicates the return type should be written straight to http response body
+ResponseEntity represents the whole HTTP response: status code, headers, and body. As a result, we can use it to fully configure the HTTP response.
+ResponseEntity is a generic type.
+[Information from Bealdung](https://www.baeldung.com/spring-response-entity)
 
-### If you saw example Controller code, would you understand what it is doing? Could you tell if it was annotated correctly? ###
+``return ResponseEntity.ok("All good.")`` Returns with a HTTP 200 response code and a body "All good"
 
-[ExampleController](../../src/main/java/ch/spring/rest/ExampleController.java)
-[ExampleRestController](../../src/main/java/ch/spring/rest/ExampleRestController.java)
+-------
 
 ### Do you need Spring MVC in your classpath? ###
 
@@ -212,7 +244,3 @@ Spring-boot-starter-web is used for a standard Spring Rest application.
 - It provides accesss to Restful services.
 - It supports all the HTTP methods.
 
-
-### If you saw an example using RestTemplate would you understand what it is doing? ###
-
-[ExampleRestTemplate](../../src/main/java/ch/spring/rest/ExampleRestTemplate.java)
