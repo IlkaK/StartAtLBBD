@@ -303,6 +303,8 @@ The method parameter annotated with ``@RequestBody`` is bound to the body of the
 ### For what do we need the annotation @Valid? ###
 
 If the annotation is used on a methode variable in a @Controller, than the value behind the variable is validated.
+@Valid annotation for method level validation. Moreover, we also use it to mark a member attribute for validation.
+But it does not support group-validation.
 
 [Valid Annotation auf Stackoverflow](https://stackoverflow.com/questions/3595160/what-does-the-valid-annotation-indicate-in-spring)
 
@@ -319,9 +321,7 @@ public class ExampleDto {
     private String name;
 ```
 
-Beim Eingang vom exampleDto wird geprueft, ob der dort gesetzte Name auch nicht leer ist.
-
-Zusaetzlich ist @Validated auf dem Controller gesetzt. Dieses ueberprueft nicht nur die einzelnen Parameter, sondern auch von einander abhängige Parameter.
+Beim Eingang vom exampleDto wird geprueft, ob der dort gesetzte Name auch nicht leer ist. Zusaetzlich ist @Validated auf dem Controller gesetzt. Dieses ueberprueft nicht nur die einzelnen Parameter, sondern auch voneinander abhängige Parameter (Gruppenvalidierung).
 
 [Beispiel dazu auf Baeldung](https://www.baeldung.com/spring-valid-vs-validated)
 
