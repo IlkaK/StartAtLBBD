@@ -49,25 +49,6 @@ WebApplicationContext is an interface to provide configuration for web applicati
 - GetMapping -> applied on method level
 - RequestMapping -> applied on class or method level
 
-### What is @RequestParam used for? ###
-
-It extracts parameter from the request, e.g. 
-
-`@GetMapping("/account")`
-
-`public List<Account>list (@RequestParam("userid") int userid) { ... }`
-
-is used for: http://localhost:8080/account?userid=1234
-
-### What are the differences between @RequestParam and @PathVariable? ####
-
-@PathVariable refers to {...} in URL 
-
-@GetMapping("/accounts/{userId}") <=> @PathVariable long userId
-
-http://localhost:8080/accounts/1234?overdrawn=true
-- 1234 is the value of the @PathVariable
-- overdrawn=true is the @RequestParam boolean overdrawn
 
 ### What are some of the parameter types for a controller method? ####
 

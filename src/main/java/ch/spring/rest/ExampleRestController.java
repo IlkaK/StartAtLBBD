@@ -20,11 +20,20 @@ public class ExampleRestController {
 		return ResponseEntity.ok(examples); // in the HTTP header ok code is sent, in the body, the set of examples are sent
 	}
 	
-	@GetMapping
+	// Get and Delete Requests verwenden hier @PathVariable (könnten auch @RequestParam dafür verwenden).
+	@GetMapping("/{id}")
 	public ResponseEntity<ExampleDto> getExample(@PathVariable @NotNull String id) {
 		return ResponseEntity.ok(exampleService.find(id));
 	}
 	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> deleteOrder(@PathVariable @NotNull String id){
+		exampleService.delete(id);
+		return new ResponseEntity<>(HttpStatus.OK); // returns only ok status code, no body, no header
+	}
+	
+	
+	// Post und Put Requests verwenden @RequestBody
 	@PostMapping
 	public ResponseEntity<String> createExample(@Valid @RequestBody ExampleDto exampleDto) {
 		ExampleDto createdExampleDto = exampleService.create(exampleDto);
@@ -37,10 +46,6 @@ public class ExampleRestController {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
-	@DeleteMapping
-	public ResponseEntity<Void> deleteOrder(@PathVariable @NotNull String id){
-		exampleService.delete(id);
-		return new ResponseEntity<>(HttpStatus.OK); // returns only ok status code, no body, no header
-	}
+	
 	
 }

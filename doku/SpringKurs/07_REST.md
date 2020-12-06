@@ -161,7 +161,7 @@ public String postFoos() {
 ```
 
 Statt ``RequestMapping(method = ...)`` verwenden wir die spezifischeren Annotation ``@GetMapping``, ``@PostMapping``, ``@PutMapping``, ``@DeleteMapping``.
-Das sind Ableitungen vom @RequestMapping, wobei jeweils ``method`` hard-codiert ist.
+Das sind Ableitungen vom ``@RequestMapping``, wobei jeweils ``method`` hard-codiert ist.
 
 [Nähere Infos dazu sind hier](https://www.logicbig.com/tutorials/spring-framework/spring-web-mvc/request-mapping-variants.html)
 
@@ -173,12 +173,12 @@ Die Definition von consumes und produces sollte im @RequestMapping eigentlich ni
 
 ### When do you need @ResponseBody? ###
 
-You need the annotation when you define a Rest response and your service is not annotated with @RestController.
+You need the annotation when you define a Rest response and your service is not annotated with ``@RestController``.
 
 ### Where do you need @ResponseBody? What about @RequestBody? Try not to get these muddled up. ###
 
-- @RequestBody: method parameter is bound to the body of the http request
-- @ResponseBody: can be put on a method, it indicates the return type should be written straight to http response body.
+- ``@RequestBody``: method parameter is bound to the body of the http request
+- ``@ResponseBody``: can be put on a method, it indicates the return type should be written straight to http response body.
 
 [Am Anfang vom ExampleRestController](../../src/main/java/ch/spring/rest/ExampleRestController.java)
 
@@ -230,6 +230,103 @@ ResponseEntity is a generic type.
 ``return ResponseEntity.ok("All good.")`` Returns with a HTTP 200 response code and a body "All good"
 
 -------
+
+### What can you do with @PathVariable? ###
+
+``@PathVariable`` refers to ``{...}`` in URL 
+
+[In der Methode deleteOrder vom ExampleRestController](../../src/main/java/ch/spring/rest/ExampleRestController.java)
+
+```
+@RequestMapping( 
+  ...
+  path = "/contract/example")
+public class ExampleRestController {
+  ...
+  @DeleteMapping("/{id}")
+  public ResponseEntity<Void> deleteOrder(@PathVariable @NotNull String id){
+	exampleService.delete(id);
+	...
+```
+
+Ein http delete request auf ``http://localhost:8080/contract/example/1234`` führt zu der Methode ``deleteOrder`` und setzt dort 1234 in der Variablen id.
+1234 ist der Wert der ``@PathVariable``.
+
+
+### What is @RequestParam used for? ###
+
+It extracts parameter from the request.
+
+```
+@GetMapping("/account")
+public List<Account>list (@RequestParam("userid") int userid) 
+```
+
+is used for: ``http://localhost:8080/account?userid=1234``
+
+[Am Anfang vom ExampleRestController](../../src/main/java/ch/spring/rest/ExampleRestController.java)
+
+
+### What are the differences between @RequestParam and @PathVariable? ####
+
+Both are used to extract values from the http request.
+
+``@RequestParam`` is used to get the request parameters from URL, also known as query parameters, while ``@PathVariable`` extracts values from URI.
+
+[Infos von Javarevisited](https://javarevisited.blogspot.com/2017/10/differences-between-requestparam-and-pathvariable-annotations-spring-mvc.html#axzz6fqfVgEmS)
+
+Example with both. The get request with: ``http://localhost:8080/accounts/1234?overdrawn=true``
+
+```
+@GetMapping("/account/{userId}")
+public List<Account>list (@PathVariable String userId, @RequestParam("overdrawn") boolean overdrawn) 
+```
+
+- 1234 is the value of the @PathVariable userId
+- true is the value of the @RequestParam overdrawn
+
+
+### Now we know @PathVariable and @RequestParam => then why do we need @RequestBody? ###
+
+[Beispiele sind in der Methode createExample und updateExample vom ExampleRestController](../../src/main/java/ch/spring/rest/ExampleRestController.java)
+
+``@RequestBody`` makes Spring to map an entire request to a model class and from there you can retrieve or set values from its getter and setter methods.
+
+The method parameter annotated with ``@RequestBody`` is bound to the body of the web request. The body of the request is passed through an HttpMessageConverter to resolve the method argument depending on the content type of the request.
+
+[Difference between RequestBody and RequestParam auf Stackoverflow](https://stackoverflow.com/questions/28039709/what-is-difference-between-requestbody-and-requestparam)
+
+[RequestBody in der Spring-Doku](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestBody.html)
+
+-------
+
+### For what do we need the annotation @Valid? ###
+
+If the annotation is used on a methode variable in a @Controller, than the value behind the variable is validated.
+
+[Valid Annotation auf Stackoverflow](https://stackoverflow.com/questions/3595160/what-does-the-valid-annotation-indicate-in-spring)
+
+[In der Methode createExample von ExampleRestController](../../src/main/java/ch/spring/rest/ExampleRestController.java) ist ein Beispiel dazu.
+
+``public ResponseEntity<String> createExample(@Valid @RequestBody ExampleDto exampleDto)``
+
+```
+public class ExampleDto {
+	
+	private String id;
+
+    @NotEmpty(message = "Example name must be set.")
+    private String name;
+```
+
+Beim Eingang vom exampleDto wird geprueft, ob der dort gesetzte Name auch nicht leer ist.
+
+Zusaetzlich ist @Validated auf dem Controller gesetzt. Dieses ueberprueft nicht nur die einzelnen Parameter, sondern auch von einander abhängige Parameter.
+
+[Beispiel dazu auf Baeldung](https://www.baeldung.com/spring-valid-vs-validated)
+
+-------
+
 
 ### Do you need Spring MVC in your classpath? ###
 
