@@ -2,7 +2,7 @@
 
 ### What is a Repository interface? ###
 
-IT is an interface that defines the repository with all logical read and write operations for a specific entity.
+It is an interface that defines the repository with all logical read and write operations for a specific entity.
 
 ### How do you define a Repository interface? ###
 

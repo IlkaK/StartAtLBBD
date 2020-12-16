@@ -58,6 +58,8 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 7. [REST](./doku/SpringKurs/07_REST.md)
 
+7a. [HTTP](./doku/SpringKurs/07a_HTTP.md)
+
 8. [Testing](./doku/SpringKurs/08_Testing.md)
 
 9. [Spring Boot Intro](./doku/SpringKurs/09_Spring_Boot.md)
