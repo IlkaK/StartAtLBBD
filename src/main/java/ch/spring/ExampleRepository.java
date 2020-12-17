@@ -1,7 +1,7 @@
 package main.java.ch.spring;
 
 @Repository
-public interface ExampleRepository extends JpaRepository<ExampleDbo, UUID> {
+public class ExampleRepository extends JpaRepository<ExampleDbo, UUID> {
     
     ExampleDbo findByExampleId();
     
