@@ -15,4 +15,22 @@ Ein paar generelle Informationen:
 
 Stream Operationen:
 
-- forEach() => gibt es auch in Iterable und Map
+- forEach(): ruft jedes Element einmal auf, danach ist die Operation abgeschlossen ("it is a terminal operation, which means that, after the operation is performed, the stream pipeline is considered consumed, and can no longer be used")
+
+- map(): auf jedes Element im Stream wird eine Funktion ausgeführt, die wieder ein Element zurückgibt, welches in einem neuen Stream gespeichert wird. 
+Die Funktion kann auch einen anderen Typ zurückgeben, so dass ein neuer Stream eines anderen Typs entsteht. Ein Beispiel ist folgendes:
+
+```
+Integer[] orderIds = { 1, 2, 3 };
+Stream<Integer> streamOfOrderIds = Stream.of(orderIds);
+Stream<OrderDbo> streamOfOrderDbos = streamOfOrderIds.map(orderRepository::findById);
+```
+
+- collect(): damit holen wir aus dem Stream die Elemente wieder raus und fügen sie wieder einer Collection hinzu, mit der wir weiterarbeiten können (z.B. List oder Map).
+Das ist eine typische Operation, nachdem auf den Elementen (z.B. via der Operation map) eine Funktion ausgeführt wurde.
+
+```
+...
+Stream<OrderDbo> streamOfOrderDbos = streamOfOrderIds.map(orderRepository::findById);
+List<OrderDbo> listOfOrderDbos = streamOfOrderDbos.collect(Collectors.toList());
+```

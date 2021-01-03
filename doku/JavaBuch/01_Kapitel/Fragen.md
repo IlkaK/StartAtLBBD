@@ -11,6 +11,7 @@
 6. Unter https://www.rheinwerk-verlag.de/java_4877/ unter dem Menüpunkt «Materialien» kann man die Aufgaben und Lösungen zum Buch herunterladen (978-3-8362-6958-2.zip (2,1 MB)).
 
 Dort findet sich unter intellij/kap01-helloworld/src die Klasse «HelloWorld.java»
+
 ```
 public class HelloWorld {
    public static void main(String[] args) {
@@ -20,6 +21,7 @@ public class HelloWorld {
   }
 }
 ```
+
 Was macht die Klasse, wenn die Methode main ausgeführt wird? Was bedeuten die Stichworte «public» und «static»?
 
 7. Was sind Klassen, Methoden und Objekte? Welche Beziehung haben die drei Sachen zueinander?
