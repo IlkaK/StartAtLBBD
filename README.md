@@ -40,6 +40,8 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 6. [Lambda und Files](./doku/JavaBuch/14_bis_16_Kapitel/File_Lambda_Aufgabe.md)
 
+7. [Streams](./doku/JavaBuch/14_bis_16_Kapitel/Streams.md)
+
 ## 4. Spring ##
 
 0. [Begriffe/Terms](./doku/SpringKurs/00_Terms.md)
