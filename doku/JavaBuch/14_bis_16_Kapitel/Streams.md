@@ -15,16 +15,34 @@ Ein paar generelle Informationen:
 
 Stream Operationen:
 
+## Terminierende Operationen ##
 - forEach(): ruft jedes Element einmal auf, danach ist die Operation abgeschlossen ("it is a terminal operation, which means that, after the operation is performed, the stream pipeline is considered consumed, and can no longer be used")
 
-- map(): auf jedes Element im Stream wird eine Funktion ausgeführt, die wieder ein Element zurückgibt, welches in einem neuen Stream gespeichert wird. 
-Die Funktion kann auch einen anderen Typ zurückgeben, so dass ein neuer Stream eines anderen Typs entsteht. Ein Beispiel ist folgendes:
+## Einen neuen Stream erzeugende Operationen ##
+
+- map(): erzeugt einen neuen Stream
+Auf jedes Element im Stream wird eine Funktion ausgeführt, die wieder ein Element zurückgibt, welches in dem neuen Stream gespeichert wird.
+Der neue Stream kann einen anderen Typ haben als der alte Stream. Welcher Typ entscheidet der Rückgabetyp der Funktion. Ein Beispiel ist Folgendes:
 
 ```
 Integer[] orderIds = { 1, 2, 3 };
 Stream<Integer> streamOfOrderIds = Stream.of(orderIds);
 Stream<OrderDbo> streamOfOrderDbos = streamOfOrderIds.map(orderRepository::findById);
 ```
+
+- filter(): erzeugt einen neuen Stream mit den Elementen, die durch den Filter passen 
+
+```
+Stream<OrderDbo> streamOfNotNullOrderDbos = streamOfOrderIds.map(orderRepository::findById).filter(o -> o != null);
+```
+Auch mehrere Filter hintereinander sind möglich.
+
+```
+Stream<OrderDbo> stremOfNotNullAndHighIdOrderDbos = streamOfOrderIds.map(orderRepository::findById).filter(o -> o != null).filter(o -> o.orderId > 2);
+```
+
+## Umwandlung zu collection, array etc. und vice versa ## 
+
 
 - collect(): damit holen wir aus dem Stream die Elemente wieder raus und fügen sie wieder einer Collection hinzu, mit der wir weiterarbeiten können (z.B. List oder Map).
 Das ist eine typische Operation, nachdem auf den Elementen (z.B. via der Operation map) eine Funktion ausgeführt wurde.
@@ -34,3 +52,19 @@ Das ist eine typische Operation, nachdem auf den Elementen (z.B. via der Operati
 Stream<OrderDbo> streamOfOrderDbos = streamOfOrderIds.map(orderRepository::findById);
 List<OrderDbo> listOfOrderDbos = streamOfOrderDbos.collect(Collectors.toList());
 ```
+
+- toArray(): wandelt den Stream in einen Array um
+```
+...
+Stream<OrderDbo> streamOfOrderDbos = streamOfOrderIds.map(orderRepository::findById);
+OrderDb[] arrayOfOrderDbos = streamOfOrderDbos.toArray();
+``
+
+## Ein einziges Element zurückgeben ##
+
+- findFirst(): gibt ein `Optional` für den ersten Eintrag im Stream zurück, das `Optional` kann leer sein:
+```
+...
+Stream<OrderDbo> streamOfOrderDbos = streamOfOrderIds.map(orderRepository::findById);
+OrderDbo firstOrderDbo = streamOfOrderDbos.findFirst().orElse(null);
+````
