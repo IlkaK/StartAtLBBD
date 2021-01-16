@@ -15,6 +15,18 @@ Ein paar generelle Informationen:
 
 Stream Operationen:
 
+
+| #1                     | #2         | #3       | #4     | #5        | #6         | #7         | #8          | #9         | #10        | #11       |
+| :--------------------- |:-----------| :------  | :----- | :-------- | :--------- |  :-------- | :---------- |:---------- |:-----------|:----------|
+|Terminierende Operation | forEach()  | count()  | min()  | max()     | allMatch() | anyMatch() | noneMatch() |            |            |           |
+|----------------------- | ---------- | -------- | ------ |---------- |----------- |----------- |------------ |----------- |------------|-----------|
+|Neuer Stream erzeugend  | map()      | filter() | peek() | iterate() | skip()     | limit()    | sorted()    | distinct() | mapToInt() | flatMap() |
+|----------------------- | ---------- | -------- | ------ |---------- |----------- |----------- |------------ |----------- |------------|-----------|
+|Umwandlung              | collect()  | toArray()|        |           |            |            |             |            |            |           |
+|----------------------- | ---------- | -------- | ------ |---------- |----------- |----------- |------------ |----------- |------------|-----------|
+|Ein Element zurück      | findFirst()|          |        |           |            |            |             |            |            |           | 
+
+
 ## Terminierende Operationen ##
 - forEach(): ruft jedes Element einmal auf, danach ist die Operation abgeschlossen ("it is a terminal operation, which means that, after the operation is performed, the stream pipeline is considered consumed, and can no longer be used")
 
