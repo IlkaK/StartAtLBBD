@@ -16,12 +16,24 @@ Ein paar generelle Informationen:
 Stream Operationen:
 
 
-| #1                     | #2         | #3       | #4     | #5        | #6         | #7         | #8          | #9         | #10        | #11       |
-| :--------------------- |:-----------| :------  | :----- | :-------- | :--------- |  :-------- | :---------- |:---------- |:-----------|:----------|
-|Terminierende Operation | forEach()  | count()  | min()  | max()     | allMatch() | anyMatch() | noneMatch() |            |            |           |
-|Neuer Stream erzeugend  | map()      | filter() | peek() | iterate() | skip()     | limit()    | sorted()    | distinct() | mapToInt() | flatMap() |
-|Umwandlung              | collect()  | toArray()|        |           |            |            |             |            |            |           |
-|Ein Element zurück      | findFirst()|          |        |           |            |            |             |            |            |           | 
+|                         |                                       |                              | 
+| :---------------------- |:--------------------------------------| -----------------------------| 
+| Terminierende Operation | forEach()                             | iteriert über alle Elemente  |         
+|                         | count()                               | liefert eine Zahl zurück     |   
+|                         | min()/ max()                          | gibt ein Element zurück      |  
+|                         | allMatch() / anyMatch() / noneMatch() | gibt true/false zurück       | 
+|                         | findFirst()                           | gibt ein Element zurück      | 
+| Erzeugt neuen Stream    | map() / mapToInt()                    |  |
+|                         | filter()                              |  |   
+|                         | iterate()                             |  |  
+|                         | skip()                                |  |  
+|                         | limit()                               |  |  
+|                         | sorted()                              |  |  
+|                         | peek()                                |  |  
+|                         | distinct()                            |  |
+|                         | flatMap()                             |  |
+| Umwandlung              | collect()                             |  |   
+|                         | toArray()                             |  |     
 
 
 ## Terminierende Operationen ##
