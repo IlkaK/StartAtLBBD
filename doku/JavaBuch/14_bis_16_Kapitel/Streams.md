@@ -27,7 +27,6 @@ Stream Operationen:
 |                         | findFirst()                           | sucht das erste Element heraus | eines der Elemente | eines der Elemente | 
 |                         | collect()                             | wandelt den Stream in eine Collection um            | eine Collection  | 
 |                         | toArray()                             | wandelt den Stream in einen Array um                | ein Array vom Typ der Elemente | 
-
 | Intermediate Operation  | map() / mapToInt()                    | wendet eine Funktion auf jedes Element im Stream an | ein neuer Stream vom Typ des Funktionsrückgabetyps | 
 | (auf bestehende Streams)| filter()                              | wendet einen Filter auf jedes Element im Stream an  | Stream vom selben Elemententyp  | 
 |                         | skip()                                | die gegebene Anzahl an ersten Elementen wird gelöscht      | Stream vom selben Elemententyp  | 
@@ -36,7 +35,6 @@ Stream Operationen:
 |                         | peek()                                | führt eine Methode (void) auf die Elemente im Stream aus | Stream vom selben Elemententyp | 
 |                         | distinct()                            | filtert doppelte Elemente aus dem Stream raus | Stream vom selben Elemententyp | 
 |                         | flatMap()                             | eine Liste in einem Stream wird flachgedrückt auf ihre Elemente | Stream vom Elementtyp der Liste  | 
-
 | Intermediate Operation  | iterate()                             | erzeugt anhand einer Funktion und eines Startelements einen Stream | Stream vom Elementtyp des Funktionsrückgabetyps | 
 | (ohne bestehende        | Stream.of()                           | erzeugt neuen Stream aus einem Array | Stream vom Elementtyp des Arrays  | 
 | Streams basieren)       | stream()                              | erzeugt einen Strean aus einer Liste | Stream vom Elementtyp der Liste   | 
@@ -104,4 +102,66 @@ Das Verhalten ist unendlich, wenn nicht abgebrochen oder abgekürzt, mit z.B. li
 ```
 Stream<Integer> evenNumStream = Stream.iterate(2, i -> i * 2);
 ```
+
+## Beispiele aus dem realen Leben ##
+
+- Was ist der Input?
+- Was passiert mit dem Input?
+- Was ist der Output?
+
+1.
+
+```
+items.forEach(item -> {
+  try {
+   connector.write(item);
+  } catch (RuntimeException e) {
+     String msg = e.getClass().getName() + " occurred during write item " + item.toString();
+     log.debug(msg, e);
+    throw new Exception(msg, e);
+ }
+});
+```
+
+2.
+
+```
+processedCaseDbos.stream()
+.map(this::processCase)
+.collect(Collectors.toList());
+```
+
+3.
+
+```
+List<SeqAType> seqATypeList = Stream.of(mapIdToSeqA(caseDbo.getId()), mapSomethingToSeqA(caseDbo.getSomething()))
+                              .filter(Objects::nonNull)
+                              .collect(Collectors.toList());
+```
+
+4.
+
+```   
+ List<String> DOCUMENT_IDENTIFICATION = Stream
+   .iterate(1, e -> e + 1)
+   .map(e -> String.format("A%02d", e))
+   .limit(12)
+   .collect(Collectors.toList());
+```  
+           
+5.
+
+``` 
+caseDbo.getPositionDbos().stream()
+.flatMap(positionDbo -> positionDbo.getPartnerDbos().stream())
+.filter(partnerDbo -> partnerDbo.getPartnerNr().equals(key))
+.findFirst()
+.ifPresentOrElse(
+   partnerDbo -> partnerDbo.getPositionDbo().setC4b(true),
+   () -> logger.warn("C4b asd flag: Didn't find expected partner " + key + " in case " + caseDbo.getId()));
+``` 
+  
+
+ 
+
 
