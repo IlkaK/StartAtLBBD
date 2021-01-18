@@ -36,8 +36,8 @@ Stream Operationen:
 |                         | distinct()                            | filtert doppelte Elemente aus dem Stream raus | Stream vom selben Elemententyp | 
 |                         | flatMap()                             | eine Liste in einem Stream wird flachgedrückt auf ihre Elemente | Stream vom Elementtyp der Liste  | 
 | Intermediate Operation  | iterate()                             | erzeugt anhand einer Funktion und eines Startelements einen Stream | Stream vom Elementtyp des Funktionsrückgabetyps | 
-| (ohne bestehende        | Stream.of()                           | erzeugt neuen Stream aus einem Array | Stream vom Elementtyp des Arrays  | 
-| Streams basieren)       | stream()                              | erzeugt einen Strean aus einer Liste | Stream vom Elementtyp der Liste   | 
+| (nicht auf bestehende   | Stream.of()                           | erzeugt neuen Stream aus einem Array | Stream vom Elementtyp des Arrays  | 
+| Streams basierend)      | stream()                              | erzeugt einen Strean aus einer Liste | Stream vom Elementtyp der Liste   | 
 
 
 ## Terminierende Operationen ##
