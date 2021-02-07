@@ -7,7 +7,7 @@ Ein Beispiel einer Implementation des Collection-Interfaces ist die [ArrayList](
 
 Die Reihenfolge des Loops bei einem Stream ist hingegen undefiniert.
 
-[Collection.forEach() uses the collection's iterator (if one is specified). That means that the processing order of the items is defined. In contrast, the processing order of Collection.stream().forEach() is undefined.](https://www.baeldung.com/java-collection-stream-foreach#:~:text=Custom%20Iterators&text=The%20reason%20for%20the%20different,the%20list%2C%20ignoring%20the%20iterator.)
+["Collection.forEach() uses the collection's iterator (if one is specified). That means that the processing order of the items is defined. In contrast, the processing order of Collection.stream().forEach() is undefined."](https://www.baeldung.com/java-collection-stream-foreach#:~:text=Custom%20Iterators&text=The%20reason%20for%20the%20different,the%20list%2C%20ignoring%20the%20iterator.)
 
 In dem oben genannten Beispiel von Baeldung wird eine ReverseList implementiert, die von der ArrayList ableitet, aber den Iterator überschreibt, so dass er die Elemente in umgekehrter Reihenfolge zurückgibt. In seinem Beispiel zeigt er dann, dass bei dem forEach direkt auf der Collection der ReverseIterator angezogen wird, beim forEach auf dem Stream jedoch nicht: ["while stream().forEach() simply takes elements one by one from the list, ignoring the iterator."](https://www.baeldung.com/java-collection-stream-foreach#:~:text=Custom%20Iterators&text=The%20reason%20for%20the%20different,the%20list%2C%20ignoring%20the%20iterator.)
 
