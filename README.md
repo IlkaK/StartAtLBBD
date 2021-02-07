@@ -42,6 +42,8 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 7. [Streams](./doku/JavaBuch/14_bis_16_Kapitel/Streams.md)
 
+8. [forEach](./doku/JavaBuch/14_bis_16_Kapitel/foreach.md)
+
 ## 4. Spring ##
 
 0. [Begriffe/Terms](./doku/SpringKurs/00_Terms.md)
