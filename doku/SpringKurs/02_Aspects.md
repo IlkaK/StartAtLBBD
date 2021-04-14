@@ -50,11 +50,11 @@
 
 - around and after throwing
 
-###  ###
+### What do you have to do to enable the detection of the @Aspect annotation? ###
 
-###  ###
+### What does @EnableAspectJAutoProxy do? ###
 
-###  ###
+### If shown pointcut expressions, would you understand them? ###
 
 ###  ###
 
