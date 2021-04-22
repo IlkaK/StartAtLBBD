@@ -15,19 +15,50 @@ unchecked exceptions:
 - better in an enterprise application => no tight coupling
 - Spring always throws Runtime (unchecked) Exceptions
 
-###  ###
+### What is the data access exception hierarchy? ###
 
-###  ###
+Spring provides DataAccessException hierarchy.
+- hides whether you are using JPA, Hibernate, JDBC
+- a hierarchy of sub-exceptions
+- consistent across all supported Data Access technologies
+- unchecked
 
-###  ###
+### How do you configure a DataSource in Spring? Which bean is very useful for development / test databases? ###
 
-###  ###
+- DataSource is used for database access and configured in JDBC Template
 
-###  ###
+### What is the Template design pattern and what is the JDBC template?  ###
 
-###  ###
+Template design pattern: 
+- widely used and useful pattern
+- defines the outlet / skeleton of an algorithm
+- leaves the details to specific implementations later
+- hides away large amounts of boilerplate code
 
-###  ###
+JDBC template:
+- simplifies JDBC API
+- eliminates repetitive boilerplate code
+- alleviates (abmildern) common cause of bugs
+- handles SQLExceptions properly
+
+### What is a callback? ###
+
+- some method calls are handled directly entirely by the Jdbc Template, some require the calling class to provide callback methods that contain the implementation of parts of the JDBC workflow
+=> inverse of control
+
+### What are the three JDBC Template callback interfaces that can be used with queries? What is each used for? ###
+
+- RowCallbackHandler => processing rows of a ResultSet
+- CallableStatementCreator => creates a callable Statement
+- PreparedStatementCreate => creates a Prepared Statement
+
+### Can you execute a plain SQL statement with JDBC template? ###
+
+Yes, with the execute() method.
+
+### When does the Jdbc Template support generic queries? How does it return objects and lists/maps of objects? ###
+
+
 
 ###  ###
 
