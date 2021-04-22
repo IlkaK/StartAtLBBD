@@ -50,32 +50,27 @@
 
 - around and after throwing
 
-### What do you have to do to enable the detection of the @Aspect annotation? ###
+### What do you have to do to enable the detection of the @Aspect annotation? What does @EnableAspectJAutoProxy do? ###
 
-### What does @EnableAspectJAutoProxy do? ###
+@EnableAspectJAutoProxy to config class: it enables handling components market with @Aspect
 
 ### If shown pointcut expressions, would you understand them? ###
 
-###  ###
+- pointcut expression structure: 
+  1. a pointcut designator
+  2. a pattern that selects join points of the type determined by the pointcut designator
+  => only method execution join points are supported by Spring AOP
 
-###  ###
+### For example, in the course we matched the getter methods on Spring Beans, what would be the correct pointcut expression to match both getter and setter methods? ###
 
-###  ###
+`execution (void set*(*)) || execution (*get*())`
 
-###  ###
+### What is the JoinPoint argument used for? ###
 
-###  ###
+- parameter must match the first parameter of the advice method
+- from JoinPoint we can access => getTarget(), getSignature(), getArgs()
 
-###  ###
+### What is a ProceedingJoinPoint? When is it used? ###
 
-###  ###
-
-###  ###
-
-###  ###
-
-###  ###
-
-###  ###
-
-###  ###
+- in @around advice
+- with proceedingJoinPoint.proceed() the actual method is called
