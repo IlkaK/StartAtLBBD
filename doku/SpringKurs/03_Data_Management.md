@@ -56,27 +56,48 @@ JDBC template:
 
 Yes, with the execute() method.
 
-### When does the Jdbc Template support generic queries? How does it return objects and lists/maps of objects? ###
+### When does the JDBC template acquire (and release) a connection, for every metohd called or once per template? Why? ####
 
+Once per method call.
 
+### How does the JDBC template support generic queries? How does it return objects and lists/maps of objects? ###
 
-###  ###
+- JDBC Template can return each row of a ResultSet as a Map
+=> query for a Map: expecting a single row => Map<String, Object> is map of column name and field value
+=> query for a List: expecting multiple rows => List<Map<String, Object>>
 
-###  ###
+----
 
-###  ###
+### What is a transaction? What is the difference between a local and a global transaction? ###
 
-###  ###
+transaction = set of tasks which take place as a single invisible action
+- atomic = each unit of work is an all-or-nothing operation
+- consistent = database integrity constraints are never violated
+- isolated = isolating transactions from each other
+- durable = committed changes are permanent
 
-###  ###
+local transaction = single resource (one database)
 
-###  ###
+global transaction = managed by dedicated transaction manager over multiple ressources
 
-###  ###
+### Is a transaction a cross cutting concern? How is it implemented in Spring? ###
 
-###  ###
+Yes, the common pattern isn PlatformTransactionManager
 
-###  ###
+### Open questions (still): ###
+- How are you going to define a transaction in Spring? 
+- What does @Transactional do? What is the PlatformTransactionManager?
+- Is the JDBC template able to participate in an existing transaction?
+- What is a transaction isolation level? How many do we have and how are they ordered?
+- What is @EnableTrnasactionManagement for?
+- What does transaction propagation mean?
+- What happens if one @Transactional annotated method is calling another @Transactional annotated method on the same object instance?
+- Where can the @Transactional annotation be used? What is a typical usage if you put it at class level?
+- What does declarative transaction management mean?
+- What is the default rollback policy?
+- How can you override it?
+- What is the default rollback policy in a JUnit test, when you use the @RunWith(SpringJUnit4ClassRunner.class) in JUnit 4 or @ExtendWith(SpringExtension.class) in JUnit 5, and annotate your @Test annotated method with @Transactional?
+- Why is the term "Unit of work" so important and why does JDBC AutoCommit violate this pattern?
 
 -------
 
