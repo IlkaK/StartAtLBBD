@@ -68,6 +68,10 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 9. [Spring Boot Intro](./doku/SpringKurs/09_Spring_Boot.md)
 
+10. [Spring Boot Testing](./doku/SpringKurs/10_Spring_Boot_Testing.md)
+
+11. [Spring Boot Actuator](./doku/SpringKurs/11_Spring_Boot_Actuator.md)
+
 ## 5. Übergeordnete Themen ## 
 
 1. [HTTP](./doku/UebergeordneteThemen/01_HTTP.md)
