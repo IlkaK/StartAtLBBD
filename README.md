@@ -79,3 +79,5 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 ## 6. Übergeordnete Themen ## 
 
 1. [HTTP](./doku/UebergeordneteThemen/01_HTTP.md)
+
+2. [Cryptozeug](./doku/UebergeordneteThemen/02_Cryptozeug.md)
