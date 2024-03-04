@@ -12,7 +12,6 @@ Advantages of dependency injection:
 - increases module reusability
 - more readable code
 
-
 ### What is an interface and what are the advantages of making use of them in Java? ###
 
 Den ersten Teil haben wir hier schon gemacht: [Logback Aufgabe](../JavaBuch/05_bis_11_Kapitel/Logback_Aufgabe.md)
@@ -37,6 +36,10 @@ Spring usage is said to be more smooth while using interfaces.
 Das haben wir bei den Begriffen schon gemacht: [Gefässe und Abhängigkeiten](./00_Terms.md)
 
 ----
+
+### Lifecyle ###
+
+https://reflectoring.io/spring-bean-lifecycle/
 
 ### Can you describe the lifecycle of a Spring Bean in an Application Context? ###
 
