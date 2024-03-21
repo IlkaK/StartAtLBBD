@@ -26,7 +26,7 @@ Unit tests:
 ### How are mock frameworks such as Mockito or EasyMock used? ###
 
 1. static import of Mockito or EasyMock
-2. create Mock with createMock(myClassToMock.class) or mock(mymyClassToMock.class)
+2. create Mock with createMock(myClassToMock.class) or mock(myClassToMock.class)
 3. inject the Mock object
 4. train the mock or set expcected behaviour
 5. test your object (using the mock)
@@ -52,3 +52,15 @@ Unit tests:
 ### How does @SpringBootTest interact with @SpringBootApplication and @SpringBootConfiguration? ###
 
 - a Spring Boot application is just a SpringApplicationContext
+
+### Mockito ###
+
+Mockito wird statisch importiert.
+
+- @ExtendWith: Das ist eine Annotation von Junit 5, um eigene Erweiterungen zu registrieren. Mockito nutzt dafür die MockitoExtension.class. Wenn diese in @ExtendWith verwendet wird, werden Mocks initialisiert und Mockitos Features zu nutzen.
+
+- @Mock: Mit der Annotation wird eine Variable instanziiert, die wir überall in der Klasse verwenden können.
+[Mockito JavaDoc](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/3.3.3/org/mockito/junit/jupiter/MockitoExtension.html)
+
+- @BeforeEach: Etwas, das vor jedem Test ausgeführt wird, [Junit JavaDoc](https://junit.org/junit5/docs/5.0.2/api/org/junit/jupiter/api/BeforeEach.html)
+

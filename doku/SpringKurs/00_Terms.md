@@ -6,7 +6,7 @@
 
 - container: ein Gefäss, in dem die Objekte leben, die man erzeugt hat und die sich dort kennen
 
-- IoC Inversion of Control: der Prozess, in dem ein Objekt definiert, welche Abhängigkeiten es hat, aber diese nicht selber erstellt
+- Inversion of Control (IoC): der Prozess, in dem ein Objekt definiert, welche Abhängigkeiten es hat, aber diese nicht selber erstellt
 
 - Spring IoC Container: das Gefäss, in dem die Objekte leben und welches zusätzlich ihre Abhängigkeiten managt
 

@@ -37,17 +37,55 @@ Das haben wir bei den Begriffen schon gemacht: [Gefässe und Abhängigkeiten](./
 
 ----
 
-### Lifecyle ###
+### Bean ###
 
-Jedes Objekt, welches innerhalb von einem Spring ApplicationContext erstellt, verwaltet und wieder zerstört wird, ist ein Spring Bean.
+
+Jedes Objekt, welches innerhalb von einem Spring ApplicationContext erstellt, verwaltet und wieder aufgeräumt wird, ist ein Spring Bean.
 
 Ein Bean kann auf zwei Arten kenntlich gemacht werden.
+
 1. Annotation der Klasse mit @Component (oder eine Unterkategorie davon, z.B. @Bean) [Components](./00_Terms.md)
 2. In einer Klasse, die mit @Configuration als Konfigurationsklasse gekennzeichnet ist, wird ein Objekt erzeugt und mit @Bean annotiert.
 
-...
 
-[https://reflectoring.io/spring-bean-lifecycle/]
+### Lifecyle ###
+
+Es gibt drei Phasen im Bean-Lebenszyklus:
+1. Bean Creation
+1.1 initialization/instantiation: Das Bean wird von Spring erstellt, so wie es auch manuell instantiiert werden würde. 
+1.2 Populting Properties: Spring setzt relevante Properties im Bean.
+1.3-1.7 Pre-Initialization, AfterPropertiesSet, Custom Initialization, Post-Initializiation, Pre-Destroy
+
+2. Destroy
+
+[Referenz](https://reflectoring.io/spring-bean-lifecycle/)
+
+### @Configuration ###
+
+[Spring-Doku](https://docs.spring.io/spring-framework/reference/core/beans/java/basic-concepts.html)
+
+Wenn eine Klasse mit @Configuration annotiert wird, ist ihr Hauptzweck, dass Beans in ihr definiert werden. Dort drin sind auch sogenannte inter-bean Dependencies möglich, also Beans können dort beim Iniliasieren wieder andere Beans referenzieren.
+
+- Die @Bean Annotation wird normalerweise nur in @Configuration Klassen verwendet.
+
+- @ComponentScan: Diese Annotation wird normalerweise in @Configuration verwendet, um die Packages anzugeben, die auf @Component Klassen gescannt werden sollen. All diese sollen von der @Configuration Klasse initialisiert werden.
+
+- @EnableAutoConfiguration: Das bedeutet Spring(-Boot) sucht sich die Dependencies zusammen (z.B. die vom Classpath), schaut, ob diese irgendwo verwendet werden und konfiguriert diese automatisch dazu. 
+
+[Spring Boot auto-configuration attempts to automatically configure your Spring application based on the jar dependencies that you have added. For example, if HSQLDB is on your classpath, and you have not manually configured any database connection beans, then Spring Boot auto-configures an in-memory database.](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-auto-configuration.html)
+
+- @Configuration+@EnableAutoConfiguration+@ComponentScan = [@SpringBootApplication](12_Spring_Boot_Auto_Configuration.md)
+
+
+- @Controller werden verwendet im [Spring Model View Controller architecture](05_MVC.md)
+
+- @Autowired - auf Konstruktor, statischem Feld oder get/set Methode: Autowired wird verwendet, um eine Abhängigkeit aufzuzeigen
+
+Vorteile für den @Autowired auf dem Konstruktor: 
+– You can define immutable instances by making the attributes final.
+– You can define dependencies in unit tests directly when you create the instance of bean you want to test.
+[@Autowired](https://laurspilca.com/comparison-field-constructor-setter-injection/)
+
 
 ### Can you describe the lifecycle of a Spring Bean in an Application Context? ###
 
@@ -67,6 +105,8 @@ Bean initialization steps:
 
 
 ### How are you going to create an Application Context in an integration test? ###
+
+
 
 ### What is the preferred way to close an Application Context? Does Spring Boot do this for you? ### 
 
