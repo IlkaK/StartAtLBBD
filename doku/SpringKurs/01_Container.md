@@ -39,7 +39,15 @@ Das haben wir bei den Begriffen schon gemacht: [Gefässe und Abhängigkeiten](./
 
 ### Lifecyle ###
 
-https://reflectoring.io/spring-bean-lifecycle/
+Jedes Objekt, welches innerhalb von einem Spring ApplicationContext erstellt, verwaltet und wieder zerstört wird, ist ein Spring Bean.
+
+Ein Bean kann auf zwei Arten kenntlich gemacht werden.
+1. Annotation der Klasse mit @Component (oder eine Unterkategorie davon, z.B. @Bean) [Components](./00_Terms.md)
+2. In einer Klasse, die mit @Configuration als Konfigurationsklasse gekennzeichnet ist, wird ein Objekt erzeugt und mit @Bean annotiert.
+
+...
+
+[https://reflectoring.io/spring-bean-lifecycle/]
 
 ### Can you describe the lifecycle of a Spring Bean in an Application Context? ###
 
