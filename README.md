@@ -76,7 +76,9 @@ In diesem Repository können wir unseren Code und die Aufgaben austauschen.
 
 12. [Spring Boot Auto Configuration](./doku/SpringKurs/12_Spring_Boot_Auto_Configuration.md)
 
-## 6. Übergeordnete Themen ## 
+## 6. Cloud ## 
+
+## 7. Übergeordnete Themen ## 
 
 1. [HTTP](./doku/UebergeordneteThemen/01_HTTP.md)
 
