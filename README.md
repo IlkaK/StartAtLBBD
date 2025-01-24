@@ -1,6 +1,4 @@
-# StartAtLBBD
-
-In diesem Repository können wir unseren Code und die Aufgaben austauschen.
+# Übersicht
 
 ## 1. Git ## 
 
